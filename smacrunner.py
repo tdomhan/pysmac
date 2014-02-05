@@ -1,7 +1,10 @@
 import tempfile
 import shutil
 import os
+import time
 from subprocess import Popen
+
+from smacparse import parse_smac_trajectory_string
 
 import numpy as np
 
@@ -54,22 +57,37 @@ class SMACRunner(object):
 
     def get_best_parameters(self):
         """
-            Get the best parameters that were found.
+            Get the best parameters that were found along with the according function value.
+
+            returns: (x, f(x))
         """
-        return np.asarray([0, 0])
+        with open(os.path.join(self._result_dir, "traj-run-1.txt"), "r") as traj_file:
+            best_config_str = traj_file.readlines()[-1].strip()
+            return parse_smac_trajectory_string(best_config_str)
+        return (np.asarray([]), 0)
 
     def _create_working_dir(self):
         self._working_dir = tempfile.mkdtemp()
+        self._exec_dir = os.path.join(self._working_dir, "exec")
+        self._out_dir = os.path.join(self._working_dir, "out")
+        os.mkdir(self._exec_dir)
+        os.mkdir(self._out_dir)
+        #also see the rungroup parameter
+        self._result_dir = os.path.join(self._out_dir, "result")
 
     def _generate_scenario_file(self):
         """
             Generate a scenario file in order to run SMAC.
         """
-        parameters = {'working_dir': self._working_dir}
+        parameters = {'working_dir': self._working_dir,
+                      'exec_dir': self._exec_dir,
+                      'out_dir': self._out_dir}
         fdata = """
 algo = echo 0
-execdir = %(working_dir)s
+execdir = %(exec_dir)s
+outdir = %(out_dir)s
 deterministic = 1
+rungroup = result
 run_obj = quality
 overall_obj = mean
 cutoff_time = 18000
@@ -78,8 +96,6 @@ validation = false
 paramfile = %(working_dir)s/params.pcs
 instance_file = %(working_dir)s/instances.txt
 """ % parameters
-#tunerTimeout = 36000
-#test_instance_file = %(working_dir)s/instances-test.txt
         self._scenario_file_name = os.path.join(self._working_dir, "smac-scenario.txt")
         with open(self._scenario_file_name, "w")  as self.scenario_file:
             self.scenario_file.write(fdata)
@@ -96,7 +112,6 @@ instance_file = %(working_dir)s/instances.txt
         param_file_name = os.path.join(self._working_dir, "params.pcs")
         with open(param_file_name, "w")  as param_file:
             param_file.write("\n".join(param_definitions))
-        print param_file_name
 
 
     def _start_smac(self):

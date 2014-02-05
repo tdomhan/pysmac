@@ -2,10 +2,10 @@ import numpy as np
 
 import time
 
+from socket import timeout
+
 from smacrunner import SMACRunner
 from smacremote import SMACRemote
-
-#TODO: add cutoff time and/or max number of evaluations
 
 
 def fmin(objective, x0, xmin, xmax, max_evaluations=100, **args):
@@ -21,8 +21,7 @@ def fmin(objective, x0, xmin, xmax, max_evaluations=100, **args):
         max_evaluations: the maximum number of evaluations to execute
         args: extra parameters to pass to the objective function
 
-
-        return best parameters found
+        returns: best parameters found
     """
     x0 = np.asarray(x0)
     xmin = np.asarray(xmin)
@@ -37,7 +36,7 @@ def fmin(objective, x0, xmin, xmax, max_evaluations=100, **args):
     while not smacrunner.is_finished():
         try:
             params = smacremote.get_next_parameters()
-        except:
+        except timeout:
             #Timeout, check if the runner is finished
             continue
 

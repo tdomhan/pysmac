@@ -1,7 +1,7 @@
 import socket
 import sys
-import numpy as np
-from itertools import izip
+
+from smacparse import parse_smac_param_string
 
 class SMACRemote(object):
     UDP_IP = "127.0.0.1"
@@ -46,29 +46,8 @@ class SMACRemote(object):
 
             returns: an array of parameters.
         """
-        data = self.receive()
-        return self._convert_smac_param_string(data)
-
-    def _convert_smac_param_string(self, string):
-        """
-            SMAC format:
-                instance0 0 18000.0 2147483647 4 -x0 '6.9846789681200185' -x1 '13.43140264469383'
-        """
-        #TODO: maybe use the seed paramter
-
-        #split and remove the leading inforation
-        params = string.strip().split()[5:]
-        param_pairs = [pair for pair in izip(*[iter(params)]*2)]
-        x = np.zeros(len(param_pairs))
-        for param_name, param_value in param_pairs:
-            #strip "-x" from the name
-            param_index = int(param_name.strip("-x"))
-            param_value = float(param_value.strip("'"))
-            print param_index, " ", param_value
-            x[param_index] = param_value
-
-        return x
-        
+        param_string = self.receive()
+        return parse_smac_param_string(param_string)
     
     def report_performance(self, performance, runtime):
         """

@@ -8,7 +8,7 @@ pysmac
                costly to calculate + don't have a  derivative available. 
 
     Minimal example:
-        import numpy as np
+         import numpy as np
 
          #Branin function
          def branin(x):
