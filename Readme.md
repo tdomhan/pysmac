@@ -26,7 +26,7 @@ Minimal example:
         return ret
 
 
-     from pysmac import fmin
+     from pysmac.optimize import fmin
      fmin(branin, (0, 0), (-5, 0), (10, 15))
 
  Compare scipy:
