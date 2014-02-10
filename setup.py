@@ -7,7 +7,7 @@ setup(
     author = "Tobias Domhan",
     author_email = "domhant@informatik.uni-freiburg.de",
     description = "python interface to SMAC.",
-    test_suite = 'pysmac.test.smacparse',
+    test_suite = 'pysmac.test.test_smacparse',
     keywords = "hyperparameter optimization hyperopt bayesian smac",
     url = "http://www.cs.ubc.ca/labs/beta/Projects/SMAC/"
 )

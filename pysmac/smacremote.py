@@ -1,7 +1,7 @@
 import socket
 import sys
 
-from smacparse import parse_smac_param_string
+from pysmac.smacparse import parse_smac_param_string
 
 class SMACRemote(object):
     UDP_IP = "127.0.0.1"

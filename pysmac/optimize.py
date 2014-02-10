@@ -4,8 +4,8 @@ import time
 
 from socket import timeout
 
-from smacrunner import SMACRunner
-from smacremote import SMACRemote
+from pysmac.smacrunner import SMACRunner
+from pysmac.smacremote import SMACRemote
 
 
 def fmin(objective, x0, xmin, xmax, max_evaluations=100, **args):

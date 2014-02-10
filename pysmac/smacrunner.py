@@ -4,7 +4,7 @@ import os
 import time
 from subprocess import Popen
 
-from smacparse import parse_smac_trajectory_string
+from pysmac.smacparse import parse_smac_trajectory_string
 
 import numpy as np
 
