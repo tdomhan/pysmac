@@ -22,22 +22,20 @@ class SMACRemote(object):
                 break
             except:
                 pass
-        print "Found port: ", self.port
+        print "Communicating on port: ", self.port
 
     def __del__(self):
         self._sock.close()
  
     def send(self, data):
-        #        print ">",
-        #line = sys.stdin.readline()
         self._sock.sendto(data, self._smac_addr)
 
     def receive(self):
-        print "Waiting for a message from SMAC."
+        #print "Waiting for a message from SMAC."
 
         data, addr = self._sock.recvfrom(4096) # buffer size is 1024 bytes
         self._smac_addr = addr
-        print "<", data
+        #print "<", data
         return data
 
     def get_next_parameters(self):
@@ -63,6 +61,6 @@ class SMACRemote(object):
         #runtime must be strictly positive:
         runtime = min(0, runtime)
         data = "Result for ParamILS: SAT, %f, 0, %f, 4" % (runtime, performance)
-        print "Response to SMAC:"
-        print data
+        #print "Response to SMAC:"
+        #print data
         self.send(data)
