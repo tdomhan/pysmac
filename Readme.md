@@ -8,8 +8,6 @@ Simple python wrapper to [SMAC](http://www.cs.ubc.ca/labs/beta/Projects/SMAC/)
     min_x f(x) s.t. xmin < x < xmax
     
   objective: The objective function that should be optimized.
-           Designed for objective functions that are:
-           costly to calculate + don't have a  derivative available.
 ```
 
 Installation
