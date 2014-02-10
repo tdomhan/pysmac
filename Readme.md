@@ -1,47 +1,57 @@
 pysmac
 ======
 
-fmin(objective, x0, xmin, xmax, params)
+Simple python wrapper to [SMAC](http://www.cs.ubc.ca/labs/beta/Projects/SMAC/)
+
+```
+ fmin(objective, x0, xmin, xmax, params)
     min_x f(x) s.t. xmin < x < xmax
-
-objective: The objective function that should be optimized.
+    
+  objective: The objective function that should be optimized.
            Designed for objective functions that are:
-           costly to calculate + don't have a  derivative available. 
+           costly to calculate + don't have a  derivative available.
+```
 
-Minimal example:
-     import numpy as np
+Installation
+------------
 
-     #Branin function
-     def branin(x):
-        x1 = x[0]
-        x2 = x[1]
-        a = 1.
-        b = 5.1 / (4.*np.pi**2)
-        c = 5. / np.pi
-        r = 6.
-        s = 10.
-        t = 1. / (8.*np.pi)
-        ret  = a*(x2-b*x1**2+c*x1-r)**2+s*(1-t)*np.cos(x1)+s
-        print ret
-        return ret
+```
+python setup.py install
+```
+ 
+Usage
+-----
 
+Let's take for example the Branin function(Note: any function that takes in an array and returns a value can be minimized):
+```python
+import numpy as np
 
-     from pysmac.optimize import fmin
-     fmin(branin, (0, 0), (-5, 0), (10, 15))
+def branin(x):
+    x1 = x[0]
+    x2 = x[1]
+    a = 1.
+    b = 5.1 / (4.*np.pi**2)
+    c = 5. / np.pi
+    r = 6.
+    s = 10.
+    t = 1. / (8.*np.pi)
+    ret  = a*(x2-b*x1**2+c*x1-r)**2+s*(1-t)*np.cos(x1)+s
+    print ret
+    return ret
+```
+For x1 ∈ [-5, 10], x2 ∈ [0, 15] the function reaches a minimum value of: *0.397887*.
 
- Compare scipy:
-     from scipy.optimize import fmin
+```python
+from pysmac.optimize import fmin
 
-     fmin(branin, x0=(0,0))
-     Optimization terminated successfully.
-              Current function value: 0.397887
-              Iterations: 80
-              Function evaluations: 152
-     Out[33]: array([ 3.1416057,  2.2749845])
+xmin, fval = fmin(branin, x0=(0,0),xmin=(-5, 0), xmax=(10, 15), max_evaluations=5000)
+```
+As soon as the evaluations are finished, we can check the output:
+```python
+>>> xmin
+array([ 3.14305644,  2.27827543])
 
- Compare hyperopt:
-    from hyperopt import fmin, tpe, hp
-
-    space = [hp.uniform(x0, -5, 10),hp.uniform(x1, 0, 15)]
-    best = fmin(branin, space=space, algo=tpe.suggest, max_evals=300)
+>>> fval
+0.397917
+```
 
