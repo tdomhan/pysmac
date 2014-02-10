@@ -3,6 +3,7 @@ import shutil
 import os
 import time
 from subprocess import Popen
+from pkg_resources import resource_filename
 
 from pysmac.smacparse import parse_smac_trajectory_string
 
@@ -118,7 +119,9 @@ instance_file = %(working_dir)s/instances.txt
         """
             Start SMAC in IPC mode. SMAC will wait for udp messages to be sent.
         """
-        cmds = ["/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac",
+        smac_path = resource_filename(__name__, 'smac/smac-v2.06.02-development-629/smac')
+        print "SMAC path: ", smac_path
+        cmds = [smac_path,
                 "--scenario-file", self._scenario_file_name,
                 "--num-run","1",
                 "--totalNumRunsLimit", str(self._max_evaluations),
