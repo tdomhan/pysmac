@@ -1,0 +1,1 @@
+10:14:26.303 [Unclean Target Algorithm Evaluator Shutdown Detector] ERROR c.u.c.b.a.t.d.d.UncleanShutdownDetectingTargetAlgorithmEvaluator - Unclean Shutdown Detected, You must call notifyShutdown() on your TAE. You may have a broken TAE decorator that doesn't forward the notifyShutdown() correctly

@@ -1,0 +1,2 @@
+14:37:07.532 [main] ERROR c.u.c.b.dsmac.executor.DSMACExecutor - Unknown option: --log-request-response
+14:37:07.532 [main] ERROR c.u.c.b.dsmac.executor.DSMACExecutor - Message: Unknown option: --log-request-response

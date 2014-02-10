@@ -1,0 +1,10 @@
+instances/CATS-d_regions-goods100-bids500_0000.lp
+instances/CATS-d_regions-goods100-bids500_0001.lp
+instances/CATS-d_regions-goods100-bids500_0003.lp
+instances/CATS-d_regions-goods100-bids500_0006.lp
+instances/CATS-d_regions-goods100-bids500_0010.lp
+instances/CATS-d_regions-goods100-bids500_0013.lp
+instances/CATS-d_regions-goods100-bids500_0014.lp
+instances/CATS-d_regions-goods100-bids500_0015.lp
+instances/CATS-d_regions-goods100-bids500_0017.lp
+instances/CATS-d_regions-goods100-bids500_0019.lp

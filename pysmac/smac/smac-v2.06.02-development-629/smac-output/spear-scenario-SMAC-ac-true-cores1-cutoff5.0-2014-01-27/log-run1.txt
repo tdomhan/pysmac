@@ -1,0 +1,554 @@
+17:08:35.077 [main] INFO  c.u.c.b.a.l.ComplexLoggingOptions - Logging to: /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/log-run1.txt
+17:08:35.092 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Automatic Configurator Library is v2.08.00-development-663 (02063b43a806) 
+17:08:35.092 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Random Forest Library is v1.05.01-development-95 (4a8077e95b21) 
+17:08:35.093 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of SMAC is v2.06.02-development-629 (3caec4ea9d89) 
+17:08:35.093 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Parsing (default) options from file: /Users/tdomhan/.aclib/tae.opt 
+17:08:35.093 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Parsing (default) options from file: /Users/tdomhan/.aclib/smac.opt 
+17:08:35.094 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Parsing (default) options from file: /Users/tdomhan/.aclib/cli-tae.opt 
+17:08:35.094 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Parsing (default) options from file: /Users/tdomhan/.aclib/help.opt 
+17:08:35.094 [main] INFO  c.u.c.b.a.m.j.JCommanderHelper - Call String:
+17:08:35.094 [main] INFO  c.u.c.b.a.m.j.JCommanderHelper - java -cp /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/conf/:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/patches/:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/DomainInter.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/Jama-1.0.2.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/aclib-src.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/aclib.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-collections-3.2.1-sources.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-collections-3.2.1.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-io-2.1.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-math-2.2.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-math3-3.2.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/exp4j-0.3.10.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/fastrf-src.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/fastrf.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/guava-14.0.1.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/jcip-annotations-src.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/jcip-annotations.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/jcommander.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/jmatharray.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/logback-access-1.0.13.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/logback-classic-1.0.13.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/logback-core-1.0.13.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/numerics4j-1.3.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/opencsv-2.3.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/slf4j-api-1.7.5.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-src.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/spi-0.2.4.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/patches/ ca.ubc.cs.beta.smac.executors.SMACExecutor --scenario-file ./example_scenarios/spear/spear-scenario.txt --num-run 1 --tae IPC --ipc-remote-port 5050 
+17:08:35.095 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - ==========Enviroment Variables===========
+ANT_HOME=/usr/share/ant/
+Apple_PubSub_Socket_Render=/tmp/launch-djxyqd/Render
+COLORFGBG=7;0
+DESTINATION=/var/folders/qk/vjq7_659605gx9p65lwxmjf00000gn/T/iTerm 1.0.0.20131124 Update
+DISPLAY=/tmp/launch-LXrzqP/org.macosforge.xquartz:0
+DYLD_FALLBACK_LIBRARY_PATH=/Users/tdomhan/anaconda/lib:/Users/tdomhan/Projects/deepnet/eigenmat
+DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-5.5/lib:
+GEM_HOME=/Users/tdomhan/.rvm/gems/ruby-2.0.0-p247
+GEM_PATH=/Users/tdomhan/.rvm/gems/ruby-2.0.0-p247:/Users/tdomhan/.rvm/gems/ruby-2.0.0-p247@global
+HOME=/Users/tdomhan
+IRBRC=/Users/tdomhan/.rvm/rubies/ruby-2.0.0-p247/.irbrc
+ITERM_PROFILE=Default
+ITERM_SESSION_ID=w2t0p0
+JAVA_ARCH=x86_64
+JAVA_MAIN_CLASS_41884=ca.ubc.cs.beta.smac.executors.SMACExecutor
+LANG=en_US.UTF-8
+LOGNAME=tdomhan
+MY_RUBY_HOME=/Users/tdomhan/.rvm/rubies/ruby-2.0.0-p247
+NDKROOT=/Users/tdomhan/Projects/android-ndk-r9
+PATH=/Users/tdomhan/anaconda/bin:/Users/tdomhan/.rvm/gems/ruby-2.0.0-p247/bin:/Users/tdomhan/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/tdomhan/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/tdomhan/.rvm/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/tdomhan/Projects/MasterThesis/pylearn2/pylearn2/scripts:/Users/tdomhan/Projects/AndroidSDK/sdk/platform-tools:/Users/tdomhan/Projects/android-ndk-r9:/Users/tdomhan/.rvm/bin:/Developer/NVIDIA/CUDA-5.5/bin
+PROMPT_COMMAND=echo -ne "\033]0;${PWD##*/}\007"
+PWD=/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629
+PYLEARN2_DATA_PATH=/Users/tdomhan/Projects/MasterThesis/data
+PYLEARN2_VIEWER_COMMAND=open -a Xee³ -Wn
+PYTHONPATH=:/Users/tdomhan/Projects/deepnet
+RUBY_VERSION=ruby-2.0.0-p247
+SHELL=/bin/bash
+SHLVL=1
+SSH_AUTH_SOCK=/tmp/launch-s34P0H/Listeners
+TERM=xterm-256color
+TERM_PROGRAM=iTerm.app
+TMPDIR=/var/folders/qk/vjq7_659605gx9p65lwxmjf00000gn/T/
+USER=tdomhan
+__CF_USER_TEXT_ENCODING=0x1F5:0:0
+__CHECKFIX1436934=1
+__rvm_date=() {  \date "$@" || return $?
+}
+_system_arch=x86_64
+_system_name=OSX
+_system_type=Darwin
+_system_version=10.9
+com.apple.java.jvmTask=CommandLine
+rvm_bin_path=/Users/tdomhan/.rvm/bin
+rvm_path=/Users/tdomhan/.rvm
+rvm_prefix=/Users/tdomhan
+rvm_version=1.22.11 (stable)
+
+17:08:40.097 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - Hostname:tdomhan-mbp.local
+17:08:40.097 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - ==========System Properties==============
+ERRLOG=/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/log-err1.txt
+NUMRUN=1
+OUTPUTDIR=/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27
+ROOT-LEVEL=DEBUG
+RUNLOG=/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/log-run1.txt
+STDOUT-LEVEL=INFO
+WARNLOG=/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/log-warn1.txt
+awt.toolkit=sun.lwawt.macosx.LWCToolkit
+file.encoding=UTF-8
+file.encoding.pkg=sun.io
+file.separator=/
+gopherProxySet=false
+java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+java.awt.printerjob=sun.lwawt.macosx.CPrinterJob
+java.class.path=/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/conf/:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/patches/:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/DomainInter.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/Jama-1.0.2.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/aclib-src.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/aclib.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-collections-3.2.1-sources.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-collections-3.2.1.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-io-2.1.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-math-2.2.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/commons-math3-3.2.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/exp4j-0.3.10.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/fastrf-src.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/fastrf.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/guava-14.0.1.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/jcip-annotations-src.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/jcip-annotations.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/jcommander.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/jmatharray.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/logback-access-1.0.13.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/logback-classic-1.0.13.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/logback-core-1.0.13.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/numerics4j-1.3.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/opencsv-2.3.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/slf4j-api-1.7.5.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-src.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/spi-0.2.4.jar:/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/patches/
+java.class.version=51.0
+java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/endorsed
+java.ext.dirs=/Users/tdomhan/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre
+java.io.tmpdir=/var/folders/qk/vjq7_659605gx9p65lwxmjf00000gn/T/
+java.library.path=/Developer/NVIDIA/CUDA-5.5/lib::/Users/tdomhan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.runtime.name=Java(TM) SE Runtime Environment
+java.runtime.version=1.7.0_45-b18
+java.specification.name=Java Platform API Specification
+java.specification.vendor=Oracle Corporation
+java.specification.version=1.7
+java.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+java.version=1.7.0_45
+java.vm.info=mixed mode
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.7
+java.vm.vendor=Oracle Corporation
+java.vm.version=24.45-b08
+line.separator=
+
+os.arch=x86_64
+os.name=Mac OS X
+os.version=10.9
+path.separator=:
+sun.arch.data.model=64
+sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes
+sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib
+sun.cpu.endian=little
+sun.cpu.isalist=
+sun.io.unicode.encoding=UnicodeBig
+sun.java.command=ca.ubc.cs.beta.smac.executors.SMACExecutor --scenario-file ./example_scenarios/spear/spear-scenario.txt --num-run 1 --tae IPC --ipc-remote-port 5050
+sun.java.launcher=SUN_STANDARD
+sun.jnu.encoding=UTF-8
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level=unknown
+user.country=US
+user.dir=/Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629
+user.home=/Users/tdomhan
+user.language=en
+user.name=tdomhan
+user.timezone=Europe/Berlin
+
+17:08:40.125 [main] INFO  c.u.c.b.a.m.j.JCommanderHelper - ==========Configuration Options==========
+[SMACOptions]
+ adaptiveCapping = true
+ alwaysRunInitialConfiguration = false
+ capAddSlack = 1.0
+ capSlack = 1.3
+classicInitModeOpts = [ClassicInitializationProcedureOptions]
+		 initialIncumbentRuns = 1
+
+dciModeOpts = [DoublingCappingInitializationProcedureOptions]
+		 numberOfChallengers = 2
+		 numberOfRunsPerChallenger = 2
+
+ucip = [UnbiasChallengerInitializationProcedureOptions]
+		 numberOfChallengers = 2
+		 numberOfRunsPerChallenger = 2
+		 cpulimit = 0
+
+ deterministicInstanceOrdering = false
+ doValidation = true
+ execMode = SMAC
+ experimentDir = /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/
+ expFunc = null
+help = [HelpOptions]
+		 showHiddenParameters = false
+		 showHelp = false
+		 helpLevel = BASIC
+		 showVersion = false
+		 helpDefaults = /Users/tdomhan/.aclib/help.opt
+
+ initialChallengeRuns = 1
+ initialIncumbent = DEFAULT
+ initializationMode = CLASSIC
+ intensificationPercentage = 0.5
+ iterativeCappingBreakOnFirstCompletion = false
+ iterativeCappingK = 1
+logOptions = [ComplexLoggingOptions]
+		 consoleLogLevel = INFO
+		 logLevel = DEBUG
+
+ maxIncumbentRuns = 2000
+mbOptions = [ModelBuildingOptions]
+		 maskCensoredDataAsKappaMax = false
+		 maskInactiveConditionalParametersAsDefaultValue = true
+		 maskCensoredDataAsUncensored = false
+		 imputationIterations = 2
+
+ modelHashCodeFile = null
+ numberOfChallengers = 10
+ numberOfRandomConfigsInEI = 10000
+ numPCA = 7
+ optionFile = null
+ optionFile2 = null
+randomForestOptions = [RandomForestOptions]
+		 brokenVarianceCalculation = false
+		 freeMemoryPercentageToSubsample = 0.25
+		 fullTreeBootstrap = false
+		 ignoreConditionality = false
+		 imputeMean = false
+		 logModel = true
+		 minVariance = 1.0E-14
+		 numTrees = 10
+		 penalizeImputedValues = false
+		 preprocessMarginal = true
+		 ratioFeatures = 0.8333333333333334
+		 shuffleImputedValues = false
+		 splitMin = 10
+		 storeDataInLeaves = false
+		 subsamplePercentage = 0.9
+		 subsampleValuesWhenLowMemory = false
+
+runGroupOptions = [RunGroupOptions]
+		 runGroupName = %SCENARIO_NAME-%executionMode-ac-%adaptiveCapping-cores%cores-cutoff%cutoffTime-%DATE
+		 runGroupExit = false
+		 replacementChar = %
+
+scenarioConfig = [ScenarioOptions]
+		 runObj = RUNTIME
+		 intraInstanceObj = MEAN
+		 interInstanceObj = MEAN
+		limitOptions = [TerminationCriteriaOptions]
+				 tunerTimeout = 30
+				 numIterations = 2147483647
+				 runtimeLimit = 2147483647
+				 totalNumRunsLimit = 9223372036854775807
+				 countSMACTimeAsTunerTime = true
+				 challengeIncumbentAttempts = 1000
+				 fileToWatch = null
+
+		instanceOptions = [ProblemInstanceOptions]
+				 instanceFile = example_scenarios/spear/instances-train.txt
+				 instanceFeatureFile = example_scenarios/spear/features.csv
+				 testInstanceFile = example_scenarios/spear/instances-test.txt
+				 checkInstanceFilesExist = false
+
+		 scenarioFile = /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/./example_scenarios/spear/spear-scenario.txt
+		 outputDirectory = /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output
+		 invalidScenarioReason = null
+		algoExecOptions = [AlgorithmExecutionOptions]
+				 algoExec = ruby spear_wrapper.rb
+				 algoExecDir = example_scenarios/spear
+				 deterministic = false
+				 cutoffTime = 5.0
+				 cutoffLength = 1.7976931348623157E308
+				taeOpts = [TargetAlgorithmEvaluatorOptions]
+						 targetAlgorithmEvaluator = IPC
+						 abortOnCrash = false
+						 abortOnFirstRunCrash = true
+						 retryCount = 0
+						 boundRuns = false
+						 maxConcurrentAlgoExecs = 1
+						 runHashCodeFile = null
+						 leakMemory = false
+						 leakMemoryAmount = 1024
+						 verifySAT = null
+						 checkSATConsistency = true
+						 checkSATConsistencyException = true
+						prePostOptions = [PrePostCommandOptions]
+								 preCommand = null
+								 postCommand = null
+								 exceptionOnError = false
+								 logOutput = true
+								 directory = /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/.
+
+						 checkResultOrderConsistent = false
+						 skipOutstandingEvaluationsTAE = false
+						 logRequestResponses = false
+						 logRequestResponsesRCOnly = false
+						 trackRunsScheduled = false
+						 trackRunsScheduledResolution = 1.0
+						 uncleanShutdownCheck = true
+						 killCaptimeExceedingRun = true
+						 killCaptimeExceedingRunFactor = 10.0
+						 checkRunConfigsUnique = true
+						 checkRunConfigsUniqueException = true
+						 observeWalltimeIfNoRuntime = true
+						 observeWalltimeScale = 0.95
+						 observeWalltimeDelay = 5.0
+						 synchronousObserver = true
+						 taeDefaults = /Users/tdomhan/.aclib/tae.opt
+						ttaedo = [TransformTargetAlgorithmEvaluatorDecoratorOptions]
+								 transform = false
+								 transformValidValuesOnly = true
+								 SAT_runtime_transform = R
+								 SAT_quality_transform = Q
+								 UNSAT_runtime_transform = R
+								 UNSAT_quality_transform = Q
+								 TIMEOUT_runtime_transform = R
+								 TIMEOUT_quality_transform = Q
+								 other_runtime_transform = R
+								 other_quality_transform = Q
+
+						 fileToWatch = null
+
+				paramFileDelegate = [ParamConfigurationSpaceOptions]
+						 paramFile = example_scenarios/spear/spear-params-mixed.pcs
+						 searchSubspace = null
+						 searchSubspaceFile = null
+						 continuousNeighbours = 4
+
+
+
+seedOptions = [SeedOptions]
+		 seedOffset = 0
+		 numRun = 1
+		 initialSeedMap = {}
+
+ smacDefaults = /Users/tdomhan/.aclib/smac.opt
+stateOpts = [StateFactoryOptions]
+		 stateSerializer = LEGACY
+		 statedeSerializer = LEGACY
+		 restoreStateFrom = null
+		 restoreIteration = null
+		 restoreScenario = null
+		 cleanOldStatesOnSuccess = true
+		 saveContextWithState = true
+
+trackingOptions = [ParamConfigurationOriginTrackingOptions]
+		 configTracking = false
+
+validationOptions = [ValidationOptions]
+		 maxTimestamp = -1.0
+		 minTimestamp = 0.0
+		 multFactor = 2.0
+		 numberOfTestInstances = 2147483647
+		 numberOfTestSeedsPerInstance = 1000
+		 numberOfValidationRuns = 1000
+		 outputFileSuffix = 
+		 saveStateFile = false
+		 useWallClockTime = false
+		 validateAll = false
+		 validateOnlyIfTunerTimeReached = 0.0
+		 validateOnlyIfWallTimeReached = 0.0
+		 validateOnlyLastIncumbent = true
+		 validationHeaders = true
+		 validationRoundingMode = UP
+		 writeThetaMatrix = false
+
+warmStartOptions = [WarmStartOptions]
+		 warmStartStateFrom = null
+		 restoreIteration = 2147483647
+
+ validationSeed = 0
+ saveRunsEveryIteration = false
+
+[AnalyticTargetAlgorithmEvaluatorOptions]
+ simulateDelay = false
+ cores = 0
+ observerFrequency = 100
+ func = CAMELBACK
+ scaleDelay = 1.0
+
+[BlackHoleTargetAlgorithmEvaluatorOptions]
+ warnings = true
+
+[CommandLineTargetAlgorithmEvaluatorOptions]
+ observerFrequency = 750
+ concurrentExecution = true
+ cores = 1
+ logAllCallStrings = false
+ logAllProcessOutput = false
+ listenForUpdates = true
+ pgNiceKillCommand = bash -c "kill -s TERM -%pid"
+ pgForceKillCommand = bash -c "kill -s KILL -%pid"
+ procNiceKillCommand = kill -s TERM %pid
+ procForceKillCommand = kill -s KILL %pid
+ smacDefaults = /Users/tdomhan/.aclib/cli-tae.opt
+
+[ConstantTargetAlgorithmEvaluatorOptions]
+ runResult = SAT
+ runtime = 1.0
+ quality = 0.0
+ runlength = 0.0
+ additionalRunData = 
+
+[IPCTargetAlgorithmEvaluatorOptions]
+ persistent = false
+ ipcMechanism = UDP
+ remoteHost = 127.0.0.1
+ remotePort = 5050
+ udpPacketSize = 4096
+
+[PreloadedResponseTargetAlgorithmEvaluatorOptions]
+ preloadedResponses = 
+ runLength = -1.0
+ quality = 0.0
+ additionalRunData = 
+
+[RandomResponseTargetAlgorithmEvaluatorOptions]
+ simulateDelay = false
+ additionalRunData = 
+ cores = 0
+ maxResponse = 10.0
+ minResponse = 0.0
+ observerFrequency = 100
+ trendCoefficient = 0.0
+ seed = 1390838909344
+ persistent = false
+ scaleDelay = 1.0
+
+
+17:08:40.134 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Loading instances from file: example_scenarios/spear/instances-train.txt and experiment dir /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/
+17:08:40.134 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Feature File specified reading features from: /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear/features.csv 
+17:08:40.140 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Feature File specifies: 125 features for 5 instances
+17:08:40.147 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Reading instances from file /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear/instances-train.txt
+17:08:40.148 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Reading instance file detecting format
+17:08:40.149 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Line with only 1 entry found, trying LEGACY_INSTANCE_PER_ROW
+17:08:40.150 [main] DEBUG c.u.c.b.a.s.RandomInstanceSeedGenerator - Initializing Instance Seed PRNG with Seed -1624182553 and 2147483647 allowed seeds
+17:08:40.151 [main] DEBUG c.u.c.b.a.s.RandomInstanceSeedGenerator - Re-Initializing Instance Seed PRNG with Seed -1624182553 and instances 5 
+17:08:40.153 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Instances loaded from file named: example_scenarios/spear/instances-train.txt
+17:08:40.154 [main] DEBUG c.u.c.b.a.p.ProblemInstanceOptions - Training Instance Seed Generator reports 2147483647 seeds 
+17:08:40.154 [main] DEBUG c.u.c.b.a.p.ProblemInstanceOptions - Training Instance Seed Generator reports that all instances have the same number of available seeds
+17:08:40.154 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Loading instances from file: example_scenarios/spear/instances-test.txt and experiment dir /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/
+17:08:40.154 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Feature File specified reading features from: /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear/features.csv 
+17:08:40.157 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Feature File specifies: 125 features for 5 instances
+17:08:40.165 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Reading instances from file /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear/instances-test.txt
+17:08:40.165 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Reading instance file detecting format
+17:08:40.166 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Line with only 1 entry found, trying LEGACY_INSTANCE_PER_ROW
+17:08:40.166 [main] DEBUG c.u.c.b.a.s.RandomInstanceSeedGenerator - Initializing Instance Seed PRNG with Seed 1005703267 and 2147483647 allowed seeds
+17:08:40.166 [main] DEBUG c.u.c.b.a.s.RandomInstanceSeedGenerator - Re-Initializing Instance Seed PRNG with Seed 1005703267 and instances 5 
+17:08:40.167 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - No match for instance named instances/qcplin2006.6215.cnf in feature file 
+17:08:40.167 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - No match for instance named instances/qcplin2006.6215.cnf in feature file 
+17:08:40.167 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - No match for instance named instances/qcplin2006.6215.cnf in feature file 
+17:08:40.167 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - No match for instance named instances/qcplin2006.6215.cnf in feature file 
+17:08:40.167 [main] WARN  c.u.c.b.a.p.ProblemInstanceHelper - Could not find features for instance instances/qcplin2006.6215.cnf trying more creative matching, may be error prone and slow [probably not really]
+17:08:40.168 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Loading instances from file: example_scenarios/spear/instances-test.txt and experiment dir /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/
+17:08:40.168 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Reading instances from file /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear/instances-test.txt
+17:08:40.168 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Reading instance file detecting format
+17:08:40.168 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Line with only 1 entry found, trying LEGACY_INSTANCE_PER_ROW
+17:08:40.169 [main] DEBUG c.u.c.b.a.s.RandomInstanceSeedGenerator - Initializing Instance Seed PRNG with Seed 1005703267 and 2147483647 allowed seeds
+17:08:40.169 [main] DEBUG c.u.c.b.a.s.RandomInstanceSeedGenerator - Re-Initializing Instance Seed PRNG with Seed 1005703267 and instances 5 
+17:08:40.170 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Instances loaded from file named: example_scenarios/spear/instances-test.txt
+17:08:40.170 [main] DEBUG c.u.c.b.a.p.ProblemInstanceOptions - Test Instance Seed Generator reports 2147483647 seeds 
+17:08:40.170 [main] DEBUG c.u.c.b.a.p.ProblemInstanceOptions - Test Instance Seed Generator reports that all instances have the same number of available seeds
+17:08:40.173 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - JVM Supports CPU Timing Measurements
+17:08:40.195 [main] DEBUG c.u.c.b.a.c.ParamConfigurationSpaceOptions - Configuration space found in example_scenarios/spear/spear-params-mixed.pcs
+17:08:40.199 [main] DEBUG c.u.c.b.a.c.ParamConfigurationSpaceOptions - Configuration space found in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear/spear-params-mixed.pcs
+17:08:40.203 [main] DEBUG c.u.c.b.a.c.ParamConfigurationSpaceOptions - Configuration space found in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/./example_scenarios/spear/spear-params-mixed.pcs
+17:08:40.207 [main] DEBUG c.u.c.b.a.c.ParamConfigurationSpaceOptions - Configuration space found in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear/spear-params-mixed.pcs
+17:08:40.212 [main] DEBUG c.u.c.b.a.c.ParamConfigurationSpaceOptions - Configuration space found in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear/spear-params-mixed.pcs
+17:08:40.216 [main] WARN  c.u.c.b.a.s.l.LegacyStateFactory - Found previous state output, renamed to: /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/old-state-1390838920216
+17:08:40.217 [main] INFO  c.u.cs.beta.smac.builder.SMACBuilder - Configuration Space Size is less than or equal to Infinity 
+17:08:40.217 [main] DEBUG c.u.c.b.a.t.TargetAlgorithmEvaluatorOptions - Instance Specific Information is NOT compatible with Verifying SAT, disabling option
+17:08:40.220 [main] INFO  c.u.cs.beta.smac.builder.SMACBuilder - Initial Incumbent is the default "-sp-clause-activity-inc '1.0' -sp-clause-decay '1.4' -sp-clause-del-heur '2' -sp-first-restart '100' -sp-learned-clause-sort-heur '0' -sp-learned-clauses-inc '1.3' -sp-learned-size-factor '0.4' -sp-max-res-lit-inc '1.0' -sp-max-res-runs '4' -sp-orig-clause-sort-heur '0' -sp-phase-dec-heur '5' -sp-rand-phase-dec-freq '0.001' -sp-rand-phase-scaling '1.0' -sp-rand-var-dec-freq '0.001' -sp-rand-var-dec-scaling '1.0' -sp-res-cutoff-cls '8' -sp-res-cutoff-lits '400' -sp-res-order-heur '0' -sp-resolution '1' -sp-restart-inc '1.5' -sp-update-dec-queue '1' -sp-use-pure-literal-rule '1' -sp-var-activity-inc '1.0' -sp-var-dec-heur '0' -sp-variable-decay '1.4'" 
+17:08:40.233 [main] DEBUG c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Checking for unclean shutdown
+17:08:40.238 [main] DEBUG c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Ensuring SAT Response consistency
+17:08:40.239 [main] INFO  c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Algorithm Execution will NOT verify run Hash Codes
+17:08:40.242 [main] DEBUG c.u.c.b.a.t.d.d.RunHashCodeVerifyingAlgorithmEvalutor - Created with 0 hash codes to verify
+17:08:40.245 [main] DEBUG c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Waiting / Monitoring outstanding target algorithm evaluations is supported
+17:08:40.246 [main] INFO  c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Checking that every request in a batch is unique
+17:08:40.246 [main] INFO  c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Using walltime as observer runtime if no runtime is reported, scale 0.95 , delay 5.0 (secs)
+17:08:40.248 [main] DEBUG c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Killing runs that exceed there captime by a factor of 10.0 
+17:08:40.249 [main] INFO  c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Synchronizing notifications to the observer
+17:08:40.250 [main] DEBUG c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - Final Target Algorithm Built is KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator( 0x31a21f8a ) ==> [ WalltimeAsRuntimeTargetAlgorithmEvaluatorDecorator( 0xac4b67b ) ==> [ CheckForDuplicateRunConfigDecorator( 0x78a84ac2 ) ==> [ OutstandingEvaluationsTargetAlgorithmEvaluatorDecorator( 0x70c44470 ) ==> [ PrePostCommandTargetAlgorithmEvaluator( 0x65694ee6 ) ==> [ TimingCheckerTargetAlgorithmEvaluator( 0x64bb120d ) ==> [ RunHashCodeVerifyingAlgorithmEvalutor( 0x359e4725 ) ==> [ SATConsistencyTargetAlgorithmEvaluator( 0x2a50e9a3 ) ==> [ AbortOnFirstRunCrashTargetAlgorithmEvaluator( 0x261ae209 ) ==> [ UncleanShutdownDetectingTargetAlgorithmEvaluator( 0x2eedd06a ) ==> [ IPCTargetAlgorithmEvaluator ] ] ] ] ] ] ] ] ] ]
+17:08:40.272 [main] DEBUG c.u.c.b.a.t.TrajectoryFileLogger - Incumbent Performance changed
+17:08:40.273 [main] DEBUG c.u.c.b.a.t.TrajectoryFileLogger - Logging incumbent: (Runs ?): 0.0, 1.7976931348623157E308, 0.0, 1, 0.0,  sp-clause-activity-inc='1.0', sp-clause-decay='1.4', sp-clause-del-heur='2', sp-clause-inversion='1', sp-first-restart='100', sp-learned-clause-sort-heur='0', sp-learned-clauses-inc='1.3', sp-learned-size-factor='0.4', sp-max-res-lit-inc='1.0', sp-max-res-runs='4', sp-orig-clause-sort-heur='0', sp-phase-dec-heur='5', sp-rand-phase-dec-freq='0.001', sp-rand-phase-scaling='1.0', sp-rand-var-dec-freq='0.001', sp-rand-var-dec-scaling='1.0', sp-res-cutoff-cls='8', sp-res-cutoff-lits='400', sp-res-order-heur='0', sp-resolution='1', sp-restart-inc='1.5', sp-update-dec-queue='1', sp-use-pure-literal-rule='1', sp-var-activity-inc='1.0', sp-var-dec-heur='0', sp-variable-decay='1.4'
+17:08:40.283 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Automatic Configuration Start Time is Jan 27, 2014 5:08:40 PM
+17:08:40.283 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Maximimum Number of Runs for the Incumbent Initialized to 2000
+17:08:40.285 [main] INFO  c.u.c.b.a.s.l.LegacyStateFactory - File copied to /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/param.pcs 
+17:08:40.285 [main] INFO  c.u.c.b.a.s.l.LegacyStateFactory - File copied to /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/instances.txt 
+17:08:40.286 [main] INFO  c.u.c.b.a.s.l.LegacyStateFactory - File copied to /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/instance-features.txt 
+17:08:40.286 [main] INFO  c.u.c.b.a.s.l.LegacyStateFactory - File copied to /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/scenario.txt 
+17:08:40.286 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Initial Incumbent set as Incumbent: 0x000D
+17:08:40.287 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Initialization Procedure Started
+17:08:40.287 [main] INFO  c.u.c.b.a.i.c.ClassicInitializationProcedure - Using Classic Initialization
+17:08:40.287 [main] INFO  c.u.c.b.a.i.c.ClassicInitializationProcedure - Configuration Set as Incumbent: 0x000D
+17:08:40.287 [main] DEBUG c.u.c.b.a.i.c.ClassicInitializationProcedure - Scheduling default configuration for 1 runs
+17:08:40.290 [main] INFO  c.u.c.b.a.i.c.ClassicInitializationProcedure - Initialization: Scheduling 1 run(s):
+17:08:40.290 [main] INFO  c.u.c.b.a.i.c.ClassicInitializationProcedure - Initialization: Scheduling run for config (0x000D) on instance 2 with seed 8765092 and captime 5.0
+17:09:20.177 [main] DEBUG c.u.c.b.a.t.d.d.RunHashCodeVerifyingAlgorithmEvalutor - Run Hash Codes:13875723 After 1 runs
+17:09:20.178 [main] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 39.0 (secs) that exceeded it's cutoff time of 5.0 (secs) by 34.0 (secs). Next warning at 35.0 (secs)  
+17:09:20.180 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event AlgorithmRunCompletedEvent (0xa2e02b2) to handler: NoRunsForManyChallengesEvent
+17:09:20.180 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event AlgorithmRunCompletedEvent (0xa2e02b2) to handler: LogRuntimeStatistics
+17:09:20.180 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event FlushEvent (0x2ca44b35) to handler: 
+17:09:20.181 [main] INFO  c.u.c.b.a.i.c.ClassicInitializationProcedure - Initialization: Completed run for config (0x000D) on instance 2 with seed 8765092 and captime 5.0 => Result: UNSAT, 6.0, 0.0, 0.0, 4, wallclock time: 39.0 seconds
+17:09:20.182 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Initialization Procedure Completed
+17:09:20.222 [main] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - This version of SMAC hardcodes run length for calls to the target algorithm to 2147483647.
+17:09:20.225 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample Call for New Incumbent 1 (0x000D) 
+cd /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/example_scenarios/spear; ruby spear_wrapper.rb instances/qcplin2006.10218.cnf 0 5.0 2147483647 4 -sp-rand-var-dec-scaling '1.0' -sp-clause-del-heur '2' -sp-restart-inc '1.5' -sp-resolution '1' -sp-res-order-heur '0' -sp-rand-var-dec-freq '0.001' -sp-var-activity-inc '1.0' -sp-res-cutoff-lits '400' -sp-rand-phase-scaling '1.0' -sp-first-restart '100' -sp-update-dec-queue '1' -sp-clause-decay '1.4' -sp-rand-phase-dec-freq '0.001' -sp-orig-clause-sort-heur '0' -sp-variable-decay '1.4' -sp-res-cutoff-cls '8' -sp-learned-clauses-inc '1.3' -sp-learned-clause-sort-heur '0' -sp-clause-activity-inc '1.0' -sp-max-res-lit-inc '1.0' -sp-max-res-runs '4' -sp-use-pure-literal-rule '1' -sp-learned-size-factor '0.4' -sp-var-dec-heur '0' -sp-phase-dec-heur '5'  
+17:09:20.237 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent Cost now: 6.0
+17:09:20.238 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent currently is: 1 (0x000D) 
+17:09:20.238 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event IncumbentPerformanceChangeEvent (0x23f23303) to handler: TrajectoryFileLogger
+17:09:20.239 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.t.TrajectoryFileLogger - Incumbent Performance changed
+17:09:20.240 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.t.TrajectoryFileLogger - Logging incumbent: (Runs 1): 7.175195, 6.0, 39.974, 1, 1.175471,  sp-clause-activity-inc='1.0', sp-clause-decay='1.4', sp-clause-del-heur='2', sp-clause-inversion='1', sp-first-restart='100', sp-learned-clause-sort-heur='0', sp-learned-clauses-inc='1.3', sp-learned-size-factor='0.4', sp-max-res-lit-inc='1.0', sp-max-res-runs='4', sp-orig-clause-sort-heur='0', sp-phase-dec-heur='5', sp-rand-phase-dec-freq='0.001', sp-rand-phase-scaling='1.0', sp-rand-var-dec-freq='0.001', sp-rand-var-dec-scaling='1.0', sp-res-cutoff-cls='8', sp-res-cutoff-lits='400', sp-res-order-heur='0', sp-resolution='1', sp-restart-inc='1.5', sp-update-dec-queue='1', sp-use-pure-literal-rule='1', sp-var-activity-inc='1.0', sp-var-dec-heur='0', sp-variable-decay='1.4'
+17:09:20.240 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event IncumbentPerformanceChangeEvent (0x23f23303) to handler: LogRuntimeStatistics
+17:09:20.240 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event FlushEvent (0xfbc1982) to handler: 
+17:09:20.242 [main] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - State Serialization for iteration 0 commencing
+17:09:20.242 [main] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - Unique Configurations Saved in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/uniq_configurations-it0.csv
+17:09:20.242 [main] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - Parameter Strings Saved in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/uniq_configurations-it0.csv
+17:09:20.244 [main] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - Run Results Saved in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/runs_and_results-it0.csv
+17:09:20.353 [main] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - Java Object Dump Saved in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/java_obj_dump-v2-it0.obj
+17:09:20.353 [main] INFO  c.u.c.b.a.s.l.LegacyStateSerializer - State saved for iteration 0 in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1 
+17:09:20.353 [main] INFO  c.u.c.b.a.s.l.LegacyStateSerializer - Saving state took 111 ms
+17:09:20.353 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Starting Iteration 1
+17:09:20.354 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event ModelBuildStartEvent (0x1934315f) to handler: LogRuntimeStatistics
+17:09:20.357 [Event Manager Dispatch Thread] INFO  c.u.c.b.a.e.h.LogRuntimeStatistics - *****Runtime Statistics*****
+ Count: 1
+ Incumbent ID: 1 (0x000D)
+ Number of Runs for Incumbent: 1
+ Number of Instances for Incumbent: 1
+ Number of Configurations Run: 1
+ Performance of the Incumbent: 6.0
+ Configuration Time Budget used: 7.210397 s (24%)
+ Configuration Time Budget remaining: 22.789603 s
+ Wall-clock Time Budget used: 40.092 s (0%)
+ Wall-clock Time Budget remaining: 2.147483606908E9 s
+ Algorithm Runs used: 1.0  (0%)
+ Algorithm Runs remaining: 9.223372036854776E18 
+ Model/Iteration used: 0.0  (0%)
+ Model/Iteration remaining: 2.147483647E9 
+ Configuration Space Searched 0.0 % 
+ Sum of Target Algorithm Execution Times (treating minimum value as 0.1): 6.0 s
+ CPU time of Configurator: 1.209898 s
+ User time of Configurator: 1.210131 s
+ Outstanding Runs on Target Algorithm Evaluator: 0
+ Outstanding Requests on TargetAlgorithmEvaluator: 0
+ Total Reported Algorithm Runtime: 6.0 s
+ Sum of Measured Wallclock Runtime: 39.0 s
+ Max Memory: 910.5 MB
+ Total Java Memory: 123.0 MB
+ Free Java Memory: 101.1597900390625 MB
+17:09:20.357 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event FlushEvent (0x362ee6ea) to handler: 
+17:09:20.360 [main] INFO  c.u.c.b.a.m.d.PCAModelDataSanitizer - Discarding 125 constant inputs of 125 in total.
+17:09:20.362 [main] INFO  c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest with 0 censored runs out of 1 total 
+17:09:20.364 [main] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest with 1 data points 
+17:09:20.369 [main] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest took 0.004 seconds 
+17:09:20.369 [main] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Preprocessing marginal for Random Forest
+17:09:20.370 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Random Forest Built
+17:09:20.371 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Model Learn Time: 0.014 (s)
+17:09:20.371 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event ModelBuildEndEvent (0x63cc5f63) to handler: ModelIterationTerminationCondition
+17:09:20.371 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event FlushEvent (0x7e8a8fc4) to handler: 
+17:09:20.372 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Prediction for incumbent: 0.6989700043360189 +/- 1.0E-14 (in log space if logModel=true)
+17:09:20.372 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Optimizing EI at valdata.iteration 1. fmin: 0.7781512503836436, fmin (accounting for minimum response value): 0.7781512503836436
+17:09:20.399 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Compute negEI for all conf. seen at valdata.iteration 1: took 0.027 s
+17:09:20.431 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Local Search took 1 steps
+17:09:20.431 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - LS 1 took 0.03 seconds and yielded neg log EI 1.3322676295501878E-13
+17:09:20.431 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - 1 Local Searches took 0.03 seconds in total 
+17:09:20.507 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Generating 10000 Random Configurations for EI took 0.075 (s)
+17:09:20.572 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Prediction for Random Configurations took 0.064 (s)
+17:09:20.592 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - EI Calculation for Random Configurations took 0.02 (s)
+17:09:20.875 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Map Insertion for Random Configurations took 0.283 (s)
+17:09:20.896 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Challenger 1 predicted 0.6989700043360189 +/- 1.0E-7, expected improvement -1.3322676295501878E-13
+17:09:20.901 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Selecting 10001 challengers based on EI took 0.53 seconds
+17:09:20.926 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Generating 10001 Random Configurations took 0.025 seconds
+17:09:20.935 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Calling intensify with 20002 challenger(s)
+17:09:20.935 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Intensification timeBound: 1.0 (s); used: 0.0  (s)
+17:09:20.936 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event ChallengeStartEvent (0x41e9e2ac) to handler: NoRunsForManyChallengesEvent
+17:09:20.936 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event FlushEvent (0x6220ac02) to handler: 
+17:09:20.936 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Performing additional run with the incumbent 
+17:09:20.937 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Iteration 1: Scheduling 1 run(s):
+17:09:20.937 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Iteration 1: Scheduling run for config 1 (0x000D) on instance 5 with seed 7163446 and captime 5.0
+17:09:34.989 [main] DEBUG c.u.c.b.a.t.d.d.RunHashCodeVerifyingAlgorithmEvalutor - Run Hash Codes:17988685 After 2 runs
+17:09:34.989 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event AlgorithmRunCompletedEvent (0x3e4eb331) to handler: NoRunsForManyChallengesEvent
+17:09:34.989 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event AlgorithmRunCompletedEvent (0x3e4eb331) to handler: LogRuntimeStatistics
+17:09:34.989 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event FlushEvent (0x5fd7e9cb) to handler: 
+17:09:34.990 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Iteration 1: Completed run for config 1 (0x000D) on instance 5 with seed 7163446 and captime 5.0 => Result: SAT, response: 6.0, wallclock time: 14.0 seconds
+17:09:34.990 [main] DEBUG c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent Cost now: 6.0
+17:09:34.991 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event IncumbentPerformanceChangeEvent (0x58363f95) to handler: TrajectoryFileLogger
+17:09:34.991 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.t.TrajectoryFileLogger - No change in performance
+17:09:34.991 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event IncumbentPerformanceChangeEvent (0x58363f95) to handler: LogRuntimeStatistics
+17:09:34.991 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.eventsystem.EventManager - Dispatching event FlushEvent (0x51887c71) to handler: 
+17:09:34.992 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Performing up to 1 run(s) for challenger (0x4721) up to a total bound of 6.001 
+17:09:34.993 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Iteration 1: Scheduling 1 run(s):
+17:09:34.994 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Iteration 1: Scheduling run for config (0x4721) on instance 2 with seed 4 and captime 5.0
+10:14:26.298 [Thread-3] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Making best attempt to save state. This state may be dirty, in that it was taken in the middle of an iteration and consequently may not be restorable. It may also be corrupt depending on the exact reason we are shutting down.
+10:14:26.303 [Unclean Target Algorithm Evaluator Shutdown Detector] ERROR c.u.c.b.a.t.d.d.UncleanShutdownDetectingTargetAlgorithmEvaluator - Unclean Shutdown Detected, You must call notifyShutdown() on your TAE. You may have a broken TAE decorator that doesn't forward the notifyShutdown() correctly
+10:14:26.315 [Thread-3] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - State Serialization for iteration 1 commencing
+10:14:26.316 [Thread-3] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - Unique Configurations Saved in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/uniq_configurations-SHUTDOWN1.csv
+10:14:26.316 [Thread-3] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - Parameter Strings Saved in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/uniq_configurations-SHUTDOWN1.csv
+10:14:26.341 [Thread-3] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - Run Results Saved in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/runs_and_results-SHUTDOWN1.csv
+10:14:26.404 [Thread-3] DEBUG c.u.c.b.a.s.l.LegacyStateSerializer - Java Object Dump Saved in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1/java_obj_dump-v2-SHUTDOWN1.obj
+10:14:26.404 [Thread-3] INFO  c.u.c.b.a.s.l.LegacyStateSerializer - State saved for iteration 1 in /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/state-run1 
+10:14:26.404 [Thread-3] INFO  c.u.c.b.a.s.l.LegacyStateSerializer - Saving state took 88 ms

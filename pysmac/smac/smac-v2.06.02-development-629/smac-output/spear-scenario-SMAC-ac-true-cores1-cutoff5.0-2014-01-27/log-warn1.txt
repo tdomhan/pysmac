@@ -1,0 +1,5 @@
+17:08:40.167 [main] WARN  c.u.c.b.a.p.ProblemInstanceHelper - Could not find features for instance instances/qcplin2006.6215.cnf trying more creative matching, may be error prone and slow [probably not really]
+17:08:40.216 [main] WARN  c.u.c.b.a.s.l.LegacyStateFactory - Found previous state output, renamed to: /Users/tdomhan/Projects/pysmac/smac/smac-v2.06.02-development-629/smac-output/spear-scenario-SMAC-ac-true-cores1-cutoff5.0-2014-01-27/old-state-1390838920216
+17:09:20.178 [main] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 39.0 (secs) that exceeded it's cutoff time of 5.0 (secs) by 34.0 (secs). Next warning at 35.0 (secs)  
+17:09:20.222 [main] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - This version of SMAC hardcodes run length for calls to the target algorithm to 2147483647.
+10:14:26.303 [Unclean Target Algorithm Evaluator Shutdown Detector] ERROR c.u.c.b.a.t.d.d.UncleanShutdownDetectingTargetAlgorithmEvaluator - Unclean Shutdown Detected, You must call notifyShutdown() on your TAE. You may have a broken TAE decorator that doesn't forward the notifyShutdown() correctly

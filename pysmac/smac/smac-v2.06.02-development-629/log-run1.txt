@@ -1,0 +1,27 @@
+14:37:07.472 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Automatic Configurator Library is v2.08.00dev-development-660 (35e548ffcce9) 
+14:37:07.475 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Random Forest Library is v1.05.01dev-experimental-100 (33f41531fea0) 
+14:37:07.475 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of dSMAC is v0.91.00dev-development-123 (d742577c9fba) 
+14:37:07.475 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Target Algorithm Evaluator Available: ANALYTIC 
+14:37:07.475 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Target Algorithm Evaluator Available: BLACKHOLE 
+14:37:07.475 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Target Algorithm Evaluator Available: CLI 
+14:37:07.475 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Target Algorithm Evaluator Available: CONSTANT 
+14:37:07.475 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Target Algorithm Evaluator Available: PARAMECHO 
+14:37:07.475 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Target Algorithm Evaluator Available: PRELOADED 
+14:37:07.475 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Target Algorithm Evaluator Available: RANDOM 
+14:37:07.476 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Parsing (default) options from file: /home/sjr/.aclib/tae.opt 
+14:37:07.476 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Parsing (default) options from file: /home/sjr/.aclib/cli-tae.opt 
+14:37:07.476 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Parsing (default) options from file: /home/sjr/.aclib/help.opt 
+14:37:07.476 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Parsing (default) options from file: /home/sjr/.aclib/dsmac.opt 
+14:37:07.532 [main] ERROR c.u.c.b.dsmac.executor.DSMACExecutor - Unknown option: --log-request-response
+14:37:07.532 [main] ERROR c.u.c.b.dsmac.executor.DSMACExecutor - Message: Unknown option: --log-request-response
+14:37:07.536 [main] DEBUG c.u.c.b.dsmac.executor.DSMACExecutor - Exception stack trace
+com.beust.jcommander.ParameterException: Unknown option: --log-request-response
+	at com.beust.jcommander.JCommander.parseValues(JCommander.java:900) ~[jcommander.jar:na]
+	at com.beust.jcommander.JCommander.parseValues(JCommander.java:846) ~[jcommander.jar:na]
+	at com.beust.jcommander.JCommander.parse(JCommander.java:447) ~[jcommander.jar:na]
+	at com.beust.jcommander.JCommander.parse(JCommander.java:429) ~[jcommander.jar:na]
+	at ca.ubc.cs.beta.dsmac.executor.DSMACExecutor.parseCLIOptions(DSMACExecutor.java:263) [bin/:na]
+	at ca.ubc.cs.beta.dsmac.executor.DSMACExecutor.dSMAC(DSMACExecutor.java:101) [bin/:na]
+	at ca.ubc.cs.beta.dsmac.executor.DSMACExecutor.main(DSMACExecutor.java:71) [bin/:na]
+14:37:07.536 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Exiting SMAC with failure. Log: /home/sjr/git/SMAC-Java/deployables/log-run1.txt
+14:37:07.536 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Returning with value: 255
