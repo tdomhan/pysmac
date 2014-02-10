@@ -42,6 +42,7 @@ def fmin(objective, x0, xmin, xmax, max_evaluations=100, **args):
 
         start = time.clock()
         performance = objective(params, **args)
+        print "Performance: %f, with parameters: " % performance, params
         runtime = time.clock() - start
 
         smacremote.report_performance(performance, runtime)

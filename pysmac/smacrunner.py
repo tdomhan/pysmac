@@ -1,6 +1,7 @@
 import tempfile
 import shutil
 import os
+import sys
 import time
 from subprocess import Popen
 from pkg_resources import resource_filename
@@ -119,7 +120,11 @@ instance_file = %(working_dir)s/instances.txt
         """
             Start SMAC in IPC mode. SMAC will wait for udp messages to be sent.
         """
-        smac_path = resource_filename(__name__, 'smac/smac-v2.06.02-development-629/smac')
+        smac_executable = "smac"
+        if sys.platform in ["win32", "cygwin"]:
+            #we're on windows
+            smac_executable = "smac.bat"
+        smac_path = resource_filename(__name__, 'smac/smac-v2.06.02-development-629/%s' % smac_executable)
         print "SMAC path: ", smac_path
         cmds = [smac_path,
                 "--scenario-file", self._scenario_file_name,
@@ -127,6 +132,6 @@ instance_file = %(working_dir)s/instances.txt
                 "--totalNumRunsLimit", str(self._max_evaluations),
                 "--tae","IPC",
                 "--ipc-remote-port", str(self._port)]
-        self._smac_process = Popen(cmds)
-
+        with open(os.devnull, "w") as fnull:
+            self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
 
