@@ -1,15 +1,18 @@
 from setuptools import setup, find_packages
 
+
 def check_java_exists():
     from subprocess import call
+    import os
+    devnull = open(os.devnull, 'w')
     try:
-        call("java")
+        call("java1", stdout=devnull, stderr=devnull)
     except:
         error_msg = """
         Java not found!
 
         pysmac needs java in order to work. You can download java from:
-        java.com/getjava
+        http://java.com/getjava
         """
         raise RuntimeError(error_msg)
 
