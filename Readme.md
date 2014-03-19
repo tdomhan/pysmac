@@ -111,12 +111,12 @@ xmin, fval = fmin(minfunc,
 
 Categorical parameters can be specified as a dictionary of lists of values they can take on, e.g.:
 ```python
-categorical_params = {"param1": [1,2,3],
+categorical_params = {"param1": [1,2,3,4,5,6,7],
                       "param2": ["string1", "string2", "string3"]}
 
-def minfunc(param1, param2):
-    print "param1: ", param1
-    print "param2: ", param2
+def minfunc(x_categorical):
+    print "param1: ", x_categorical["param1"]
+    print "param2: ", x_categorical["param2"]
     return 1.
 
 xmin, fval = fmin(minfunc,
