@@ -12,4 +12,6 @@ do
 done
 jarconcat=${jarconcat:1}
 
-exec java -Xmx"$SMACMEM"m -cp "$DIR/conf/:$DIR/patches/:$jarconcat:$DIR/patches/" $EXEC "$@"
+
+echo exec java -Xmx"$SMACMEM"m -cp "$DIR/conf/:$DIR/patches/:$jarconcat:$DIR/patches/" $EXEC "$@"
+#exec java -Xmx"$SMACMEM"m -cp "$DIR/conf/:$DIR/patches/:$jarconcat:$DIR/patches/" $EXEC "$@"

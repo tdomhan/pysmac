@@ -16,19 +16,34 @@ class SMACRunner(object):
         see: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/
     """
 
-    def __init__(self, x0, xmin, xmax, port, max_evaluations, seed):
+    def __init__(self,
+                 x0, xmin, xmax,
+                 x0_int, xmin_int, xmax_int,
+                 x_categorical,
+                 port, max_evaluations, seed):
         """
             Start up SMAC.
 
             x0: initial guess
             xmin: minimum values
             xmax: maximum values 
+            x0_int: initial guess of integer parameters
+            xmin_int: minimum values of ingeter parameters
+            xmax_int: minimum values of ingeter parameters
+            x_categorical: categorical parameters
             port: the port to communicate with SMACRemote
             max_evaluations: the maximum number of evaluations
         """
         self.x0 = x0
         self.xmin = xmin
         self.xmax = xmax
+
+        self.x0_int = x0_int
+        self.xmin_int = xmin_int
+        self.xmax_int = xmax_int
+
+        self.x_categorical = x_categorical
+
         self._port = port
         self._max_evaluations = max_evaluations
         self._seed = seed
@@ -112,6 +127,13 @@ instance_file = %(working_dir)s/instances.txt
         param_definitions = []
         for i, (min_val, max_val, default_val) in enumerate(zip(self.xmin, self.xmax, self.x0)):
             param_definitions.append("x%d [%f, %f] [%f]" % (i, min_val, max_val, default_val))
+        for i, (min_val, max_val, default_val) in enumerate(zip(self.xmin_int, self.xmax_int, self.x0_int)):
+            param_definitions.append("x_int%d [%d, %d] [%d]i" % (i, min_val, max_val, default_val))
+        for name, values in self.x_categorical.iteritems():
+            str_values = map(str, values)
+            param_definitions.append("x_categorical_%s {%s} [%s]" % (name,
+                ", ".join(str_values),
+                str_values[0]))
         param_file_name = os.path.join(self._working_dir, "params.pcs")
         with open(param_file_name, "w")  as param_file:
             param_file.write("\n".join(param_definitions))

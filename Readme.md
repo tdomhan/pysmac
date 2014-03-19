@@ -53,3 +53,41 @@ array([ 3.14305644,  2.27827543])
 0.397917
 ```
 
+Advanced
+--------
+
+### Integer parameters
+Integer parameters can be encoded as follows:
+```python
+
+def minfunc(x, x_int):
+    print "x: ", x
+    print "x_int: ", x_int
+    return 1.
+
+xmin, fval = fmin(minfunc,
+                  x0=(0,0), xmin=(-5, 0), xmax=(10, 15),
+                  x0_int=(0,0), xmin_int=(-5, 0), xmax_int=(10, 15),
+                  max_evaluations=5000)
+```
+
+
+### Categorical parameters
+
+Categorical parameters can be specified as a dictionary of lists of values they can take on, e.g.:
+```python
+categorical_params = {"param1": [1,2,3],
+                      "param2": ["string1", "string2", "string3"]}
+
+def minfunc(x, param1, param2):
+    print "x: ", x
+    print "param1: ", param1
+    print "param2: ", param2
+    return 1.
+
+xmin, fval = fmin(minfunc,
+                  x0=(0,0), xmin=(-5, 0), xmax=(10, 15),
+                  x_categorical=categorical_params,
+                  max_evaluations=5000)
+```
+
