@@ -16,7 +16,7 @@ class SMACRunner(object):
         see: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/
     """
 
-    def __init__(self, x0, xmin, xmax, port, max_evaluations):
+    def __init__(self, x0, xmin, xmax, port, max_evaluations, seed):
         """
             Start up SMAC.
 
@@ -31,6 +31,7 @@ class SMACRunner(object):
         self.xmax = xmax
         self._port = port
         self._max_evaluations = max_evaluations
+        self._seed = seed
 
         self._create_working_dir()
         self._generate_scenario_file()
@@ -115,23 +116,35 @@ instance_file = %(working_dir)s/instances.txt
         with open(param_file_name, "w")  as param_file:
             param_file.write("\n".join(param_definitions))
 
+    def _smac_classpath(self):
+        smac_folder = resource_filename(__name__, 'smac/smac-v2.06.02-development-629/')
+        smac_conf_folder = os.path.join(smac_folder, "conf")
+        smac_patches_folder = os.path.join(smac_folder, "patches")
+        print "SMAC folder: ", smac_folder
+        classpath = [fname for fname in os.listdir(smac_folder) if fname.endswith(".jar")]
+        classpath = [os.path.join(smac_folder, fname) for fname in classpath]
+        classpath = [os.path.abspath(fname) for fname in classpath]
+        classpath.append(os.path.abspath(smac_conf_folder))
+        classpath.append(os.path.abspath(smac_patches_folder))
+        return classpath
 
     def _start_smac(self):
         """
             Start SMAC in IPC mode. SMAC will wait for udp messages to be sent.
         """
-        smac_executable = "smac"
-        if sys.platform in ["win32", "cygwin"]:
-            #we're on windows
-            smac_executable = "smac.bat"
-        smac_path = resource_filename(__name__, 'smac/smac-v2.06.02-development-629/%s' % smac_executable)
-        print "SMAC path: ", smac_path
-        cmds = [smac_path,
+
+        cmds = ["java",
+                "-Xmx1024m",
+                "-cp",
+                ":".join(self._smac_classpath()),
+                "ca.ubc.cs.beta.smac.executors.SMACExecutor",
                 "--scenario-file", self._scenario_file_name,
                 "--num-run","1",
                 "--totalNumRunsLimit", str(self._max_evaluations),
-                "--tae","IPC",
-                "--ipc-remote-port", str(self._port)]
+                "--tae", "IPC",
+                "--ipc-remote-port", str(self._port),
+                "--seed", str(self._seed),
+                ]
         with open(os.devnull, "w") as fnull:
             self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
 

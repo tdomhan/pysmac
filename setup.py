@@ -6,8 +6,10 @@ def check_java_exists():
     import os
     devnull = open(os.devnull, 'w')
     try:
-        call("java1", stdout=devnull, stderr=devnull)
+        call("java", stdout=devnull, stderr=devnull)
     except:
+        #import traceback
+        #print traceback.format_exc()
         error_msg = """
         Java not found!
 
@@ -20,7 +22,7 @@ check_java_exists()
 
 setup(
     name = "pysmac",
-    version = "0.1",
+    version = "0.2",
     packages = find_packages(),
     install_requires = ['numpy', 'docutils>=0.3', 'setuptools'],
     author = "Tobias Domhan",

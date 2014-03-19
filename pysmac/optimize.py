@@ -8,7 +8,7 @@ from pysmac.smacrunner import SMACRunner
 from pysmac.smacremote import SMACRemote
 
 
-def fmin(objective, x0, xmin, xmax, max_evaluations=100, **args):
+def fmin(objective, x0, xmin, xmax, max_evaluations=100, seed=1, **args):
     """
         min_x f(x) s.t. xmin < x < xmax
 
@@ -19,6 +19,7 @@ def fmin(objective, x0, xmin, xmax, max_evaluations=100, **args):
         xmin: minimum values 
         xmax: maximum values
         max_evaluations: the maximum number of evaluations to execute
+        seed: the seed that SMAC is initialized with
         args: extra parameters to pass to the objective function
 
         returns: best parameters found
@@ -31,7 +32,7 @@ def fmin(objective, x0, xmin, xmax, max_evaluations=100, **args):
 
     smacremote = SMACRemote()
 
-    smacrunner = SMACRunner(x0, xmin, xmax, smacremote.port, max_evaluations)
+    smacrunner = SMACRunner(x0, xmin, xmax, smacremote.port, max_evaluations, seed)
 
     while not smacrunner.is_finished():
         try:
