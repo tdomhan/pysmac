@@ -71,6 +71,7 @@ def fmin(objective,
             continue
 
         start = time.clock()
+        assert all([param not in args.keys() for param in params.keys()]), "Naming collision between parameters and custom arguments"
         function_args = {}
         function_args.update(params)
         function_args.update(args)

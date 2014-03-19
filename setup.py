@@ -1,15 +1,17 @@
 from setuptools import setup, find_packages
 
+"""
+    for the long description, convert:
+        https://coderwall.com/p/qawuyq
+"""
 
 def check_java_exists():
     from subprocess import call
     import os
-    devnull = open(os.devnull, 'w')
     try:
+        devnull = open(os.devnull, 'w')
         call("java", stdout=devnull, stderr=devnull)
     except:
-        #import traceback
-        #print traceback.format_exc()
         error_msg = """
         Java not found!
 
