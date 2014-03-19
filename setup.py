@@ -3,6 +3,8 @@ from setuptools import setup, find_packages
 """
     for the long description, convert:
         https://coderwall.com/p/qawuyq
+    or manually here:
+        http://johnmacfarlane.net/pandoc/try/
 """
 
 def check_java_exists():
@@ -24,7 +26,7 @@ check_java_exists()
 
 setup(
     name = "pysmac",
-    version = "0.2",
+    version = "0.3",
     packages = find_packages(),
     install_requires = ['numpy', 'docutils>=0.3', 'setuptools'],
     author = "Tobias Domhan",

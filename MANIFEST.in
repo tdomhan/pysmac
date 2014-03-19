@@ -2,3 +2,4 @@ recursive-include pysmac/smac *.jar
 recursive-include pysmac/smac *.bat
 recursive-include pysmac/smac *.xml
 recursive-include pysmac/smac smac
+include Readme.rst
