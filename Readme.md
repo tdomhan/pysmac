@@ -1,7 +1,7 @@
 pysmac
 ======
 
-Simple python wrapper to [SMAC](http://www.cs.ubc.ca/labs/beta/Projects/SMAC/)
+Simple python wrapper to [SMAC](http://www.cs.ubc.ca/labs/beta/Projects/SMAC/), a versatile tool for optimizing algorithm parameters.
 
 ```
  fmin(objective, x0, xmin, xmax, x0_int, xmin_int, xmax_int, xcategorical, params)
