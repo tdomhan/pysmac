@@ -29,7 +29,7 @@ python setup.py install
 Example usage
 -------------
 
-Let's take for example the Branin function:
+Let's take for example the Branin function. (Note that the branin function is not the ideal use case for SMAC, which is designed to be a global optimization tool for costly functions. That said, it'll serves the purpose of checking that everything is working.)
 ```python
 import numpy as np
 
