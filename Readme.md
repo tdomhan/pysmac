@@ -34,17 +34,10 @@ Let's take for example the Branin function:
 import numpy as np
 
 def branin(x):
-    x1 = x[0]
-    x2 = x[1]
-    a = 1.
-    b = 5.1 / (4.*np.pi**2)
-    c = 5. / np.pi
-    r = 6.
-    s = 10.
-    t = 1. / (8.*np.pi)
-    ret  = a*(x2-b*x1**2+c*x1-r)**2+s*(1-t)*np.cos(x1)+s
-    print ret
-    return ret
+    b = (5.1 / (4.*np.pi**2))
+    c = (5. / np.pi)
+    t = (1. / (8.*np.pi))
+    return 1.*(x[1]-b*x[0]**2+c*x[0]-6.)**2+10.*(1-t)*np.cos(x[0])+10.
 ```
 For x1 ∈ [-5, 10], x2 ∈ [0, 15] the function reaches a minimum value of: *0.397887*.
 
