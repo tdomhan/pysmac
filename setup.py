@@ -33,7 +33,7 @@ setup(
     author_email = "domhant@informatik.uni-freiburg.de",
     description = "python interface to the hyperparameter optimization tool SMAC.",
     include_package_data = True,
-    test_suite = 'pysmac.test.test_smacparse',
+    test_suite = 'pysmac.test',
     keywords = "hyperparameter parameter optimization hyperopt bayesian smac global",
     license = "SMAC is free for academic & non-commercial usage. Please contact Frank Hutter(fh@informatik.uni-freiburg.de) to discuss obtaining a license for commercial purposes.",
     url = "http://www.cs.ubc.ca/labs/beta/Projects/SMAC/"

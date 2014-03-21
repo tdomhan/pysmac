@@ -20,12 +20,6 @@ Pip
 
     pip install pysmac
 
-Manual
-~~~~~~
-
-::
-
-    python setup.py install
 
 Example usage
 -------------
