@@ -29,7 +29,7 @@ python setup.py install
 Example usage
 -------------
 
-Let's take for example the Branin function. (Note that the branin function is not the ideal use case for SMAC, which is designed to be a global optimization tool for costly functions. That said, it'll serves the purpose of checking that everything is working.)
+Let's take for example the Branin function. (Note that the branin function is not the ideal use case for SMAC, which is designed to be a global optimization tool for costly functions. That said, it'll serve the purpose of checking that everything is working.)
 ```python
 import numpy as np
 
@@ -62,6 +62,11 @@ Let's run the objective function with the found parameters:
 >>> branin(**xmin)
 0.397917
 ```
+
+License
+-------
+
+SMAC is free for academic & non-commercial usage. Please contact [Frank Hutter](mailto:fh@informatik.uni-freiburg.de) to discuss obtaining a license for commercial purposes.
 
 Advanced
 --------
