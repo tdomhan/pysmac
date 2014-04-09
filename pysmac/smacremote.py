@@ -22,7 +22,7 @@ class SMACRemote(object):
                 break
             except:
                 pass
-        print "Communicating on port: ", self.port
+        #print "Communicating on port: ", self.port
 
     def __del__(self):
         self._sock.close()

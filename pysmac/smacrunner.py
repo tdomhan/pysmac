@@ -55,7 +55,7 @@ class SMACRunner(object):
         self._start_smac()
 
     def __del__(self):
-        print "Shutting down SMACRunner."
+        #print "Shutting down SMACRunner."
         if hasattr(self, "_working_dir"):
             shutil.rmtree(self._working_dir)
         if hasattr(self, "_smac_process"):
@@ -142,7 +142,7 @@ instance_file = %(working_dir)s/instances.txt
         smac_folder = resource_filename(__name__, 'smac/smac-v2.06.02-development-629/')
         smac_conf_folder = os.path.join(smac_folder, "conf")
         smac_patches_folder = os.path.join(smac_folder, "patches")
-        print "SMAC folder: ", smac_folder
+        #print "SMAC folder: ", smac_folder
         classpath = [fname for fname in os.listdir(smac_folder) if fname.endswith(".jar")]
         classpath = [os.path.join(smac_folder, fname) for fname in classpath]
         classpath = [os.path.abspath(fname) for fname in classpath]
