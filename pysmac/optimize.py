@@ -82,11 +82,18 @@ def fmin(objective,
         function_args = {}
         function_args.update(params)
         function_args.update(custom_args)
+
         performance = objective(**function_args)
+
         assert performance is not None, ("objective function did not return "
             "a result for parameters %s" % str(function_args))
-        if current_fmin is None or performance < current_fmin or iteration % update_status_every == 0:
+        if current_fmin is None or performance < current_fmin:
             current_fmin = performance
+            fmin_changed = True
+        else:
+            fmin_changed = False
+
+        if fmin_changed or iteration % update_status_every == 0:
             print "Iteration %d/%d, current fmin: %f" % (iteration, max_evaluations, current_fmin)
         runtime = time.clock() - start
 
