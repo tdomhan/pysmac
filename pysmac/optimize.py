@@ -31,6 +31,9 @@ def fmin(objective,
          custom_args={},
          max_evaluations=100, seed=1,
          update_status_every=500,
+         smac_rf_num_trees=100,
+         smac_rf_full_tree_bootstrap=True,
+         smac_intensification_percentage=0.0
          ):
     """
         min_x f(x) s.t. xmin < x < xmax
@@ -50,6 +53,12 @@ def fmin(objective,
         seed: the seed that SMAC is initialized with
         update_status_every: the number of iterations, between status updates
 
+        Advanced
+        --------
+        smac_rf_num_trees: number of trees to create in random forest.
+        smac_rf_full_tree_bootstrap: bootstrap all data points into trees.
+        smac_intensification_percentage: percent of time to spend intensifying versus model learning.
+
         returns: best parameters found
     """
     x0, xmin, xmax = format_params(x0, xmin, xmax, np.float)
@@ -65,7 +74,10 @@ def fmin(objective,
     smacrunner = SMACRunner(x0, xmin, xmax,
                             x0_int, xmin_int, xmax_int,
                             x_categorical,
-                            smacremote.port, max_evaluations, seed)
+                            smacremote.port, max_evaluations, seed,
+                            smac_rf_num_trees,
+                            smac_rf_full_tree_bootstrap,
+                            smac_intensification_percentage)
     current_fmin = None
     iteration = 0
     while not smacrunner.is_finished():
