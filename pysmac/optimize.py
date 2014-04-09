@@ -28,7 +28,8 @@ def fmin(objective,
          x0=[], xmin=[], xmax=[],
          x0_int=[], xmin_int=[], xmax_int=[],
          x_categorical={},
-         max_evaluations=100, seed=1, **args):
+         max_evaluations=100, seed=1,
+         **args):
     """
         min_x f(x) s.t. xmin < x < xmax
 
@@ -62,8 +63,10 @@ def fmin(objective,
                             x0_int, xmin_int, xmax_int,
                             x_categorical,
                             smacremote.port, max_evaluations, seed)
-
+    current_fmin = None
+    iteration = 0
     while not smacrunner.is_finished():
+        iteration += 1
         try:
             params = smacremote.get_next_parameters()
         except timeout:
@@ -71,14 +74,17 @@ def fmin(objective,
             continue
 
         start = time.clock()
-        assert all([param not in args.keys() for param in params.keys()]), "Naming collision between parameters and custom arguments"
+        assert all([param not in args.keys() for param in params.keys()]), ("Naming collision between parameters"
+                                                                            "and custom arguments")
         function_args = {}
         function_args.update(params)
         function_args.update(args)
         performance = objective(**function_args)
         assert performance is not None, ("objective function did not return "
             "a result for parameters %s" % str(function_args))
-        print "Performance: %f, with parameters: " % performance, params
+        if current_fmin is None or performance < current_fmin:
+            current_fmin = performance
+            print "Iteration %d/%d, current fmin: %f" % (iteration, max_evaluations, current_fmin)
         runtime = time.clock() - start
 
         smacremote.report_performance(performance, runtime)
