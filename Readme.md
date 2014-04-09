@@ -84,8 +84,8 @@ def minfunc(x, custom_arg1, custom_arg2):
 
 xmin, fval = fmin(minfunc, x0=(0,0),xmin=(-5, 0), xmax=(10, 15),
                   max_evaluations=5000,
-                  custom_arg1="test",
-                  custom_arg2=123)
+                  custom_args={"custom_arg1": "test",
+                               "custom_arg2": 123})
 ```
 
 

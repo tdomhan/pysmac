@@ -28,8 +28,10 @@ def fmin(objective,
          x0=[], xmin=[], xmax=[],
          x0_int=[], xmin_int=[], xmax_int=[],
          x_categorical={},
+         custom_args={},
          max_evaluations=100, seed=1,
-         **args):
+         update_status_every=500,
+         ):
     """
         min_x f(x) s.t. xmin < x < xmax
 
@@ -43,9 +45,10 @@ def fmin(objective,
         xmin_int: minimum values of integer params
         xmax_int: maximum values of integer params
         x_categorical: dictionary of categorical parameters
+        custom_args: a dict of custom arguments to the objective function
         max_evaluations: the maximum number of evaluations to execute
         seed: the seed that SMAC is initialized with
-        args: extra parameters to pass to the objective function
+        update_status_every: the number of iterations, between status updates
 
         returns: best parameters found
     """
@@ -74,15 +77,15 @@ def fmin(objective,
             continue
 
         start = time.clock()
-        assert all([param not in args.keys() for param in params.keys()]), ("Naming collision between parameters"
-                                                                            "and custom arguments")
+        assert all([param not in custom_args.keys() for param in params.keys()]), ("Naming collision between"
+                                                                                   "parameters and custom arguments")
         function_args = {}
         function_args.update(params)
-        function_args.update(args)
+        function_args.update(custom_args)
         performance = objective(**function_args)
         assert performance is not None, ("objective function did not return "
             "a result for parameters %s" % str(function_args))
-        if current_fmin is None or performance < current_fmin:
+        if current_fmin is None or performance < current_fmin or iteration % update_status_every == 0:
             current_fmin = performance
             print "Iteration %d/%d, current fmin: %f" % (iteration, max_evaluations, current_fmin)
         runtime = time.clock() - start
