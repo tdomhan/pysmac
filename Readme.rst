@@ -1,8 +1,9 @@
 pysmac
 ======
 
-Simple python wrapper to `SMAC`_, a versatile tool for optimizing
-algorithm parameters.
+Simple python wrapper to
+`SMAC <http://www.cs.ubc.ca/labs/beta/Projects/SMAC/>`__, a versatile
+tool for optimizing algorithm parameters.
 
 ::
 
@@ -31,9 +32,9 @@ Manual
 Example usage
 -------------
 
-Let’s take for example the Branin function. (Note that the branin
+Let's take for example the Branin function. (Note that the branin
 function is not the ideal use case for SMAC, which is designed to be a
-global optimization tool for costly functions. That said, it’ll serves
+global optimization tool for costly functions. That said, it'll serve
 the purpose of checking that everything is working.)
 
 .. code:: python
@@ -46,8 +47,8 @@ the purpose of checking that everything is working.)
         t = (1. / (8.*np.pi))
         return 1.*(x[1]-b*x[0]**2+c*x[0]-6.)**2+10.*(1-t)*np.cos(x[0])+10.
 
-For x1 âˆˆ [-5, 10], x2 âˆˆ [0, 15] the function reaches a minimum value
-of: *0.397887*.
+For x1 ∈ [-5, 10], x2 ∈ [0, 15] the function reaches a minimum value of:
+*0.397887*.
 
 Note: fmin accepts any function that has a parameter called ``x`` (the
 input array) and returns an objective value.
@@ -68,12 +69,19 @@ As soon as the evaluations are finished, we can check the output:
     >>> fval
     0.397917
 
-Let’s run the objective function with the found parameters:
+Let's run the objective function with the found parameters:
 
 .. code:: python
 
     >>> branin(**xmin)
     0.397917
+
+License
+-------
+
+SMAC is free for academic & non-commercial usage. Please contact `Frank
+Hutter <mailto:fh@informatik.uni-freiburg.de>`__ to discuss obtaining a
+license for commercial purposes.
 
 Advanced
 --------
@@ -94,8 +102,8 @@ and the custom arguments.
 
     xmin, fval = fmin(minfunc, x0=(0,0),xmin=(-5, 0), xmax=(10, 15),
                       max_evaluations=5000,
-                      custom_arg1="test",
-                      custom_arg2=123)
+                      custom_args={"custom_arg1": "test",
+                                   "custom_arg2": 123})
 
 Integer parameters
 ~~~~~~~~~~~~~~~~~~
@@ -134,5 +142,3 @@ values they can take on, e.g.:
     xmin, fval = fmin(minfunc,
                       x_categorical=categorical_params,
                       max_evaluations=5000)
-
-.. _SMAC: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/
