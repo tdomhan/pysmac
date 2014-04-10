@@ -33,7 +33,7 @@ def fmin(objective,
          update_status_every=500,
          smac_rf_num_trees=100,
          smac_rf_full_tree_bootstrap=True,
-         smac_intensification_percentage=0.0
+         smac_intensification_percentage=0.01
          ):
     """
         min_x f(x) s.t. xmin < x < xmax
@@ -51,7 +51,7 @@ def fmin(objective,
         custom_args: a dict of custom arguments to the objective function
         max_evaluations: the maximum number of evaluations to execute
         seed: the seed that SMAC is initialized with
-        update_status_every: the number of iterations, between status updates
+        update_status_every: the number of num_evaluationss, between status updates
 
         Advanced
         --------
@@ -79,9 +79,9 @@ def fmin(objective,
                             smac_rf_full_tree_bootstrap,
                             smac_intensification_percentage)
     current_fmin = None
-    iteration = 0
+    num_evaluations = 0
     while not smacrunner.is_finished():
-        iteration += 1
+        num_evaluations += 1
         try:
             params = smacremote.get_next_parameters()
         except timeout:
@@ -105,8 +105,8 @@ def fmin(objective,
         else:
             fmin_changed = False
 
-        if fmin_changed or iteration % update_status_every == 0:
-            print "Iteration %d/%d, current fmin: %f" % (iteration, max_evaluations, current_fmin)
+        if fmin_changed or num_evaluations % update_status_every == 0:
+            print "Number of evaluations %d, current fmin: %f" % (num_evaluations, current_fmin)
         runtime = time.clock() - start
 
         smacremote.report_performance(performance, runtime)
