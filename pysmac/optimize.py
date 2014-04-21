@@ -84,7 +84,6 @@ def fmin(objective,
 
     try:
         while not smacrunner.is_finished():
-            num_evaluations += 1
             try:
                 params = smacremote.get_next_parameters()
             except timeout:
@@ -99,6 +98,7 @@ def fmin(objective,
             function_args.update(custom_args)
 
             performance = objective(**function_args)
+            num_evaluations += 1
 
             assert performance is not None, ("objective function did not return "
                 "a result for parameters %s" % str(function_args))
@@ -113,8 +113,12 @@ def fmin(objective,
             runtime = time.clock() - start
 
             smacremote.report_performance(performance, runtime)
+
     except KeyboardInterrupt:
-        logging.warn("aborting ... received keyboard interrupt")
+        logging.warn("received keyboard interrupt ... aborting")
+        smacrunner.stop()
+
+    print "Number of evaluations %d, fmin: %f" % (num_evaluations, current_fmin)
 
     return smacrunner.get_best_parameters()
 

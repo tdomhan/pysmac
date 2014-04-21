@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import logging
+import signal
 from subprocess import Popen
 from pkg_resources import resource_filename
 
@@ -199,3 +200,7 @@ instance_file = %(working_dir)s/instances.txt
             else:
                 self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
 
+    def stop(self):
+        if not self.is_finished():
+            self._smac_process.send_signal(signal.SIGINT)
+            self._smac_process.wait()

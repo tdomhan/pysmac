@@ -9,9 +9,11 @@ class SMACRemote(object):
     TCP_PORT = 5050
     #The size of a udp package
     #note: set in SMAC using --ipc-udp-packetsize
+    TIMEOUT = 3
 
     def __init__(self):
         self._sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self._sock.settimeout(SMACRemote.TIMEOUT)
 
         self._conn = None
 
@@ -30,18 +32,26 @@ class SMACRemote(object):
             self._conn.close()
         self._sock.close()
 
+    def _connect(self):
+        self._sock.settimeout(SMACRemote.TIMEOUT)
+        self._conn, addr = self._sock.accept()
+        self._conn.settimeout(SMACRemote.TIMEOUT)
+
+    def _disconnect(self):
+        self._conn.close()
+        self._conn = None
+
     def send(self, data):
         assert self._conn is not None
 
         logging.debug("> " + str(data))
         self._conn.sendall(data)
-
-        self._conn.close()
-        self._conn = None
+        
+        self._disconnect()
 
     def receive(self):
         logging.debug("Waiting for a message from SMAC.")
-        self._conn, addr = self._sock.accept()
+        self._connect()
 
         #data = self._conn.recv(4096) # buffer size is 4096 bytes
         fconn = self._conn.makefile('r') 
