@@ -122,3 +122,38 @@ xmin, fval = fmin(minfunc,
                   max_evaluations=5000)
 ```
 
+#### Example
+
+Let's for example setup 20 categorical parameters that can either take 1 or 0 as well as the objective function being the number of parameters minus the sum of all the parameter values. This objective function will be minimized if all parameters are set to 1.
+
+```python
+
+ndim = 10
+categorical_params = {}
+for i in range(ndim):
+    categorical_params["%d" % i] = [0, 1]
+
+def sum_binary_params(x_categorical):
+    return len(x_categorical.values()) - sum(x_categorical.values())
+```
+
+Now we can go ahead and let SMAC minimize the objective function:
+
+```python
+xmin, fval = fmin(minfunc,
+                  x_categorical=categorical_params,
+                  max_evaluations=500)
+```
+Let's look at the result:
+```python
+xmin = {'x_categorical': {'0': 1,
+  '1': 1,
+  '2': 1,
+  '3': 1,
+  '4': 1,
+  '5': 1,
+  '6': 1,
+  '7': 1,
+  '8': 1,
+  '9': 1}}
+```
