@@ -1,6 +1,7 @@
 import numpy as np
 
 import time
+import logging
 
 from socket import timeout
 
@@ -80,36 +81,40 @@ def fmin(objective,
                             smac_intensification_percentage)
     current_fmin = None
     num_evaluations = 0
-    while not smacrunner.is_finished():
-        num_evaluations += 1
-        try:
-            params = smacremote.get_next_parameters()
-        except timeout:
-            #Timeout, check if the runner is finished
-            continue
 
-        start = time.clock()
-        assert all([param not in custom_args.keys() for param in params.keys()]), ("Naming collision between"
-                                                                                   "parameters and custom arguments")
-        function_args = {}
-        function_args.update(params)
-        function_args.update(custom_args)
+    try:
+        while not smacrunner.is_finished():
+            num_evaluations += 1
+            try:
+                params = smacremote.get_next_parameters()
+            except timeout:
+                #Timeout, check if the runner is finished
+                continue
 
-        performance = objective(**function_args)
+            start = time.clock()
+            assert all([param not in custom_args.keys() for param in params.keys()]), ("Naming collision between"
+                                                                                       "parameters and custom arguments")
+            function_args = {}
+            function_args.update(params)
+            function_args.update(custom_args)
 
-        assert performance is not None, ("objective function did not return "
-            "a result for parameters %s" % str(function_args))
-        if current_fmin is None or performance < current_fmin:
-            current_fmin = performance
-            fmin_changed = True
-        else:
-            fmin_changed = False
+            performance = objective(**function_args)
 
-        if fmin_changed or num_evaluations % update_status_every == 0:
-            print "Number of evaluations %d, current fmin: %f" % (num_evaluations, current_fmin)
-        runtime = time.clock() - start
+            assert performance is not None, ("objective function did not return "
+                "a result for parameters %s" % str(function_args))
+            if current_fmin is None or performance < current_fmin:
+                current_fmin = performance
+                fmin_changed = True
+            else:
+                fmin_changed = False
 
-        smacremote.report_performance(performance, runtime)
+            if fmin_changed or num_evaluations % update_status_every == 0:
+                print "Number of evaluations %d, current fmin: %f" % (num_evaluations, current_fmin)
+            runtime = time.clock() - start
+
+            smacremote.report_performance(performance, runtime)
+    except KeyboardInterrupt:
+        logging.warn("aborting ... received keyboard interrupt")
 
     return smacrunner.get_best_parameters()
 

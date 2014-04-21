@@ -3,6 +3,7 @@ import shutil
 import os
 import sys
 import time
+import logging
 from subprocess import Popen
 from pkg_resources import resource_filename
 
@@ -15,6 +16,8 @@ class SMACRunner(object):
         Interface to the SMAC library:
         see: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/
     """
+
+    SMAC_VERSION = "smac-v2.08.00-development-676"
 
     def __init__(self,
                  x0, xmin, xmax,
@@ -151,15 +154,21 @@ instance_file = %(working_dir)s/instances.txt
             param_file.write("\n".join(param_definitions))
 
     def _smac_classpath(self):
-        smac_folder = resource_filename(__name__, 'smac/smac-v2.06.02-development-629/')
+        smac_folder = resource_filename(__name__, 'smac/%s/' % SMACRunner.SMAC_VERSION)
         smac_conf_folder = os.path.join(smac_folder, "conf")
         smac_patches_folder = os.path.join(smac_folder, "patches")
-        #print "SMAC folder: ", smac_folder
-        classpath = [fname for fname in os.listdir(smac_folder) if fname.endswith(".jar")]
-        classpath = [os.path.join(smac_folder, fname) for fname in classpath]
+        smac_lib_folder = os.path.join(smac_folder, "lib")
+
+        logging.debug("SMAC lib folder: %s", smac_folder)
+
+        classpath = [fname for fname in os.listdir(smac_lib_folder) if fname.endswith(".jar")]
+        classpath = [os.path.join(smac_lib_folder, fname) for fname in classpath]
         classpath = [os.path.abspath(fname) for fname in classpath]
         classpath.append(os.path.abspath(smac_conf_folder))
         classpath.append(os.path.abspath(smac_patches_folder))
+
+        logging.debug("SMAC classpath: %s", ":".join(classpath))
+
         return classpath
 
     def _start_smac(self):
@@ -176,6 +185,7 @@ instance_file = %(working_dir)s/instances.txt
                 "--num-run","1",
                 "--totalNumRunsLimit", str(self._max_evaluations),
                 "--tae", "IPC",
+                "--ipc-mechanism", "TCP",
                 "--ipc-remote-port", str(self._port),
                 "--seed", str(self._seed),
                 "--rf-num-trees", str(self._rf_num_trees),
@@ -183,6 +193,9 @@ instance_file = %(working_dir)s/instances.txt
                 "--intensification-percentage", str(self._intensification_percentage)
                 ]
         with open(os.devnull, "w") as fnull:
-            self._smac_process = Popen(cmds, stdout = sys.stdout, stderr = sys.stdout)
-            #self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
+            #logging.debug(" ".join(cmds))
+            if logging.getLogger().level <= logging.DEBUG:
+                self._smac_process = Popen(cmds, stdout = sys.stdout, stderr = sys.stdout)
+            else:
+                self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
 
