@@ -31,7 +31,7 @@ class SMACRemote(object):
         self._sock.sendto(data, self._smac_addr)
 
     def receive(self):
-        #print "Waiting for a message from SMAC."
+        print "Waiting for a message from SMAC."
 
         data, addr = self._sock.recvfrom(4096) # buffer size is 4096 bytes
         self._smac_addr = addr

@@ -33,7 +33,7 @@ def fmin(objective,
          update_status_every=500,
          smac_rf_num_trees=100,
          smac_rf_full_tree_bootstrap=True,
-         smac_intensification_percentage=0.01
+         smac_intensification_percentage=0.0
          ):
     """
         min_x f(x) s.t. xmin < x < xmax

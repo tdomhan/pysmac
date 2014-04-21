@@ -183,5 +183,6 @@ instance_file = %(working_dir)s/instances.txt
                 "--intensification-percentage", str(self._intensification_percentage)
                 ]
         with open(os.devnull, "w") as fnull:
-            self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
+            self._smac_process = Popen(cmds, stdout = sys.stdout, stderr = sys.stdout)
+            #self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
 
