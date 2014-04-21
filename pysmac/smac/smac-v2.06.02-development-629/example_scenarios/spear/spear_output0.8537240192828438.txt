@@ -1,4 +1,0 @@
-c solving instances/qcplin2006.10408.cnf
-c TIMEOUT
-s UNKNOWN
-c runtime 1.02 [s]

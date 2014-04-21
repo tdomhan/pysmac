@@ -1,0 +1,14 @@
+16:57:51.866 [main] INFO  c.u.c.b.a.l.ComplexLoggingOptions - Logging to: /Users/tdomhan/Projects/pysmac/pysmac/smac/smac-v2.08.00-development-676/log-run1.txt
+16:57:51.879 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Automatic Configurator Library is v2.08.00-development-715 (6d9b3f017cf3) 
+16:57:51.879 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Java Runtime Environment is Java HotSpot(TM) 64-Bit Server VM (1.7.0_45) 
+16:57:51.879 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of OS is Mac OS X 10.9.2 (x86_64) 
+16:57:51.879 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Random Forest Library is v1.05.01-development-95 (4a8077e95b21) 
+16:57:51.879 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of SMAC is v2.08.00-development-676 (7d06c20b25d2) 
+16:57:51.880 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - Message: Option File (JCommander @ParameterFile) does not exist: smac-scenario.txt
+16:57:51.880 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Note that some options are read from files in ~/.aeatk/
+16:57:51.881 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Exiting SMAC with failure. Log: /Users/tdomhan/Projects/pysmac/pysmac/smac/smac-v2.08.00-development-676/log-run1.txt
+16:57:51.881 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - For a list of available commands use:  --help
+16:57:51.881 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The Quickstart guide at available at: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/ or alternatively (doc/quickstart.html) gives simple examples for getting up and running.
+16:57:51.881 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The FAQ (doc/faq.pdf) contains commonly asked questions regarding troubleshooting, and usage.
+16:57:51.881 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The Manual (doc/manual.pdf) contains detailed information on file format semantics.
+16:57:51.881 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - If you are stuck, please ask a question in the SMAC forum: https://groups.google.com/forum/#!forum/smac-forum
