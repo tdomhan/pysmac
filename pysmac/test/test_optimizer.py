@@ -76,8 +76,8 @@ class OptimizerTest(unittest.TestCase):
                           xmin_int=(-100, -100),
                           xmax_int=(100, 100),
                           max_evaluations=1,
-                          custom_arg1=1,
-                          custom_arg2="some_string")
+                          custom_args={"custom_arg1": 1,
+                                       "custom_arg2": "some_string"})
 
 
 def main():

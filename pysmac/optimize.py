@@ -1,6 +1,7 @@
 import numpy as np
 
 import time
+import logging
 
 from socket import timeout
 
@@ -28,7 +29,13 @@ def fmin(objective,
          x0=[], xmin=[], xmax=[],
          x0_int=[], xmin_int=[], xmax_int=[],
          x_categorical={},
-         max_evaluations=100, seed=1, **args):
+         custom_args={},
+         max_evaluations=100, seed=1,
+         update_status_every=500,
+         smac_rf_num_trees=100,
+         smac_rf_full_tree_bootstrap=True,
+         smac_intensification_percentage=0.0
+         ):
     """
         min_x f(x) s.t. xmin < x < xmax
 
@@ -42,9 +49,16 @@ def fmin(objective,
         xmin_int: minimum values of integer params
         xmax_int: maximum values of integer params
         x_categorical: dictionary of categorical parameters
+        custom_args: a dict of custom arguments to the objective function
         max_evaluations: the maximum number of evaluations to execute
         seed: the seed that SMAC is initialized with
-        args: extra parameters to pass to the objective function
+        update_status_every: the number of num_evaluationss, between status updates
+
+        Advanced
+        --------
+        smac_rf_num_trees: number of trees to create in random forest.
+        smac_rf_full_tree_bootstrap: bootstrap all data points into trees.
+        smac_intensification_percentage: percent of time to spend intensifying versus model learning.
 
         returns: best parameters found
     """
@@ -61,27 +75,50 @@ def fmin(objective,
     smacrunner = SMACRunner(x0, xmin, xmax,
                             x0_int, xmin_int, xmax_int,
                             x_categorical,
-                            smacremote.port, max_evaluations, seed)
+                            smacremote.port, max_evaluations, seed,
+                            smac_rf_num_trees,
+                            smac_rf_full_tree_bootstrap,
+                            smac_intensification_percentage)
+    current_fmin = None
+    num_evaluations = 0
 
-    while not smacrunner.is_finished():
-        try:
-            params = smacremote.get_next_parameters()
-        except timeout:
-            #Timeout, check if the runner is finished
-            continue
+    try:
+        while not smacrunner.is_finished():
+            try:
+                params = smacremote.get_next_parameters()
+            except timeout:
+                #Timeout, check if the runner is finished
+                continue
 
-        start = time.clock()
-        assert all([param not in args.keys() for param in params.keys()]), "Naming collision between parameters and custom arguments"
-        function_args = {}
-        function_args.update(params)
-        function_args.update(args)
-        performance = objective(**function_args)
-        assert performance is not None, ("objective function did not return "
-            "a result for parameters %s" % str(function_args))
-        print "Performance: %f, with parameters: " % performance, params
-        runtime = time.clock() - start
+            start = time.clock()
+            assert all([param not in custom_args.keys() for param in params.keys()]), ("Naming collision between"
+                                                                                       "parameters and custom arguments")
+            function_args = {}
+            function_args.update(params)
+            function_args.update(custom_args)
 
-        smacremote.report_performance(performance, runtime)
+            performance = objective(**function_args)
+            num_evaluations += 1
+
+            assert performance is not None, ("objective function did not return "
+                "a result for parameters %s" % str(function_args))
+            if current_fmin is None or performance < current_fmin:
+                current_fmin = performance
+                fmin_changed = True
+            else:
+                fmin_changed = False
+
+            if fmin_changed or num_evaluations % update_status_every == 0:
+                print "Number of evaluations %d, current fmin: %f" % (num_evaluations, current_fmin)
+            runtime = time.clock() - start
+
+            smacremote.report_performance(performance, runtime)
+
+    except KeyboardInterrupt:
+        logging.warn("received keyboard interrupt ... aborting")
+        smacrunner.stop()
+
+    print "Number of evaluations %d, fmin: %f" % (num_evaluations, current_fmin)
 
     return smacrunner.get_best_parameters()
 

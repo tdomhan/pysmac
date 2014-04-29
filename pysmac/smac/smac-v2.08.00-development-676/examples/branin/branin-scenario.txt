@@ -1,0 +1,5 @@
+no-instances = true
+runObj = QUALITY
+numberOfRunsLimit = 100 
+pcs-file = examples/branin/params.pcs
+algo = examples/branin/branin.py

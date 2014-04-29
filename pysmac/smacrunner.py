@@ -3,6 +3,8 @@ import shutil
 import os
 import sys
 import time
+import logging
+import signal
 from subprocess import Popen
 from pkg_resources import resource_filename
 
@@ -16,11 +18,17 @@ class SMACRunner(object):
         see: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/
     """
 
+    SMAC_VERSION = "smac-v2.08.00-development-676"
+
     def __init__(self,
                  x0, xmin, xmax,
                  x0_int, xmin_int, xmax_int,
                  x_categorical,
-                 port, max_evaluations, seed):
+                 port, max_evaluations, seed,
+                 rf_num_trees,
+                 rf_full_tree_bootstrap,
+                 intensification_percentage
+                 ):
         """
             Start up SMAC.
 
@@ -33,6 +41,10 @@ class SMACRunner(object):
             x_categorical: categorical parameters
             port: the port to communicate with SMACRemote
             max_evaluations: the maximum number of evaluations
+
+            rf_num_trees: number of trees to create in random forest.
+            rf_full_tree_bootstrap: bootstrap all data points into trees.
+            intensification_percentage: percent of time to spend intensifying versus model learning.
         """
         self.x0 = x0
         self.xmin = xmin
@@ -48,6 +60,10 @@ class SMACRunner(object):
         self._max_evaluations = max_evaluations
         self._seed = seed
 
+        self._rf_num_trees = rf_num_trees
+        self._rf_full_tree_bootstrap = rf_full_tree_bootstrap
+        self._intensification_percentage = intensification_percentage
+
         self._create_working_dir()
         self._generate_scenario_file()
         self._generate_instance_file()
@@ -55,7 +71,7 @@ class SMACRunner(object):
         self._start_smac()
 
     def __del__(self):
-        print "Shutting down SMACRunner."
+        #print "Shutting down SMACRunner."
         if hasattr(self, "_working_dir"):
             shutil.rmtree(self._working_dir)
         if hasattr(self, "_smac_process"):
@@ -139,15 +155,21 @@ instance_file = %(working_dir)s/instances.txt
             param_file.write("\n".join(param_definitions))
 
     def _smac_classpath(self):
-        smac_folder = resource_filename(__name__, 'smac/smac-v2.06.02-development-629/')
+        smac_folder = resource_filename(__name__, 'smac/%s/' % SMACRunner.SMAC_VERSION)
         smac_conf_folder = os.path.join(smac_folder, "conf")
         smac_patches_folder = os.path.join(smac_folder, "patches")
-        print "SMAC folder: ", smac_folder
-        classpath = [fname for fname in os.listdir(smac_folder) if fname.endswith(".jar")]
-        classpath = [os.path.join(smac_folder, fname) for fname in classpath]
+        smac_lib_folder = os.path.join(smac_folder, "lib")
+
+        logging.debug("SMAC lib folder: %s", smac_folder)
+
+        classpath = [fname for fname in os.listdir(smac_lib_folder) if fname.endswith(".jar")]
+        classpath = [os.path.join(smac_lib_folder, fname) for fname in classpath]
         classpath = [os.path.abspath(fname) for fname in classpath]
         classpath.append(os.path.abspath(smac_conf_folder))
         classpath.append(os.path.abspath(smac_patches_folder))
+
+        logging.debug("SMAC classpath: %s", ":".join(classpath))
+
         return classpath
 
     def _start_smac(self):
@@ -164,9 +186,21 @@ instance_file = %(working_dir)s/instances.txt
                 "--num-run","1",
                 "--totalNumRunsLimit", str(self._max_evaluations),
                 "--tae", "IPC",
+                "--ipc-mechanism", "TCP",
                 "--ipc-remote-port", str(self._port),
                 "--seed", str(self._seed),
+                "--rf-num-trees", str(self._rf_num_trees),
+                "--rf-full-tree-bootstrap", str(self._rf_full_tree_bootstrap),
+                "--intensification-percentage", str(self._intensification_percentage)
                 ]
         with open(os.devnull, "w") as fnull:
-            self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
+            #logging.debug(" ".join(cmds))
+            if logging.getLogger().level <= logging.DEBUG:
+                self._smac_process = Popen(cmds, stdout = sys.stdout, stderr = sys.stdout)
+            else:
+                self._smac_process = Popen(cmds, stdout = fnull, stderr = fnull)
 
+    def stop(self):
+        if not self.is_finished():
+            self._smac_process.send_signal(signal.SIGINT)
+            self._smac_process.wait()

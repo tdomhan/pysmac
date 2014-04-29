@@ -30,7 +30,7 @@ python setup.py install
 Example usage
 -------------
 
-Let's take for example the Branin function. (Note that the branin function is not the ideal use case for SMAC, which is designed to be a global optimization tool for costly functions. That said, it'll serves the purpose of checking that everything is working.)
+Let's take for example the Branin function. (Note that the branin function is not the ideal use case for SMAC, which is designed to be a global optimization tool for costly functions. That said, it'll serve the purpose of checking that everything is working.)
 ```python
 import numpy as np
 
@@ -64,6 +64,11 @@ Let's run the objective function with the found parameters:
 0.397917
 ```
 
+License
+-------
+
+SMAC is free for academic & non-commercial usage. Please contact [Frank Hutter](mailto:fh@informatik.uni-freiburg.de) to discuss obtaining a license for commercial purposes.
+
 Advanced
 --------
 
@@ -80,8 +85,8 @@ def minfunc(x, custom_arg1, custom_arg2):
 
 xmin, fval = fmin(minfunc, x0=(0,0),xmin=(-5, 0), xmax=(10, 15),
                   max_evaluations=5000,
-                  custom_arg1="test",
-                  custom_arg2=123)
+                  custom_args={"custom_arg1": "test",
+                               "custom_arg2": 123})
 ```
 
 
@@ -118,3 +123,38 @@ xmin, fval = fmin(minfunc,
                   max_evaluations=5000)
 ```
 
+#### Example
+
+Let's for example setup 20 categorical parameters that can either take 1 or 0 as well as the objective function being the number of parameters minus the sum of all the parameter values. This objective function will be minimized if all parameters are set to 1.
+
+```python
+
+ndim = 10
+categorical_params = {}
+for i in range(ndim):
+    categorical_params["%d" % i] = [0, 1]
+
+def sum_binary_params(x_categorical):
+    return len(x_categorical.values()) - sum(x_categorical.values())
+```
+
+Now we can go ahead and let SMAC minimize the objective function:
+
+```python
+xmin, fval = fmin(minfunc,
+                  x_categorical=categorical_params,
+                  max_evaluations=500)
+```
+Let's look at the result:
+```python
+xmin = {'x_categorical': {'0': 1,
+  '1': 1,
+  '2': 1,
+  '3': 1,
+  '4': 1,
+  '5': 1,
+  '6': 1,
+  '7': 1,
+  '8': 1,
+  '9': 1}}
+```

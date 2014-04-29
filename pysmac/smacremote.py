@@ -1,41 +1,63 @@
 import socket
 import sys
+import logging
 
 from pysmac.smacparse import parse_smac_param_string
 
 class SMACRemote(object):
-    UDP_IP = "127.0.0.1"
-    UDP_PORT = 5050
+    IP = "127.0.0.1"
+    TCP_PORT = 5050
     #The size of a udp package
     #note: set in SMAC using --ipc-udp-packetsize
-    UDP_PACKAGE_SIZE = 4096
-    SOCKET_TIMEOUT = 3
+    TIMEOUT = 3
 
     def __init__(self):
-        self._sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self._sock.settimeout(SMACRemote.SOCKET_TIMEOUT)
+        self._sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self._sock.settimeout(SMACRemote.TIMEOUT)
+
+        self._conn = None
 
         #try to find a free port:
-        for self.port in range(SMACRemote.UDP_PORT, SMACRemote.UDP_PORT+1000):
+        for self.port in range(SMACRemote.TCP_PORT, SMACRemote.TCP_PORT+1000):
             try:
-                self._sock.bind((SMACRemote.UDP_IP, self.port))
+                self._sock.bind((SMACRemote.IP, self.port))
+                self._sock.listen(1)
                 break
             except:
                 pass
-        print "Communicating on port: ", self.port
+        logging.debug("Communicating on port: %d", self.port)
 
     def __del__(self):
+        if self._conn is not None:
+            self._conn.close()
         self._sock.close()
- 
+
+    def _connect(self):
+        self._sock.settimeout(SMACRemote.TIMEOUT)
+        self._conn, addr = self._sock.accept()
+        self._conn.settimeout(SMACRemote.TIMEOUT)
+
+    def _disconnect(self):
+        self._conn.close()
+        self._conn = None
+
     def send(self, data):
-        self._sock.sendto(data, self._smac_addr)
+        assert self._conn is not None
+
+        logging.debug("> " + str(data))
+        self._conn.sendall(data)
+        
+        self._disconnect()
 
     def receive(self):
-        #print "Waiting for a message from SMAC."
+        logging.debug("Waiting for a message from SMAC.")
+        self._connect()
 
-        data, addr = self._sock.recvfrom(4096) # buffer size is 4096 bytes
-        self._smac_addr = addr
-        #print "<", data
+        #data = self._conn.recv(4096) # buffer size is 4096 bytes
+        fconn = self._conn.makefile('r') 
+        data = fconn.readline()
+
+        logging.debug("< " + str(data))
         return data
 
     def get_next_parameters(self):
@@ -61,6 +83,7 @@ class SMACRemote(object):
         #runtime must be strictly positive:
         runtime = min(0, runtime)
         data = "Result for ParamILS: SAT, %f, 0, %f, 4" % (runtime, performance)
-        #print "Response to SMAC:"
-        #print data
+        logging.debug("Response to SMAC:")
+        logging.debug(str(data))
+
         self.send(data)
