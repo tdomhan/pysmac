@@ -15,12 +15,13 @@ Installation
 
 ### Pip
 
+
 ```
 pip install pysmac
 ```
 
 
-### Manual
+### Manually
 
 ```
 python setup.py install
