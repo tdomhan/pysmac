@@ -68,7 +68,7 @@ class SMACRunner(object):
             Has the SMAC run finished?
         """
         self._smac_process.poll()
-        if self._smac_process.returncode == None:
+        if self._smac_process.returncode is None:
             return False
         else:
             return True
