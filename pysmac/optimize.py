@@ -99,7 +99,6 @@ def fmin(objective,
             function_args.update(custom_args)
 
             performance = objective(**function_args)
-            print "PERFORMANCE: ", performance
             num_evaluations += 1
 
             assert performance is not None, ("objective function did not return "
