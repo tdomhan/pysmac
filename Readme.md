@@ -10,6 +10,11 @@ Simple python wrapper to [SMAC](http://www.cs.ubc.ca/labs/beta/Projects/SMAC/), 
   objective: The objective function that should be optimized.
 ```
 
+Requirements
+------------
+
+SMAC (and therefore also pysmac) requires [Java 7](https://jdk7.java.net/download.html).
+
 Installation
 ------------
 
