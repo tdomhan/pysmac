@@ -99,6 +99,7 @@ def fmin(objective,
             function_args.update(custom_args)
 
             performance = objective(**function_args)
+            print "PERFORMANCE: ", performance
             num_evaluations += 1
 
             assert performance is not None, ("objective function did not return "
@@ -109,7 +110,7 @@ def fmin(objective,
             else:
                 fmin_changed = False
 
-            if fmin_changed or num_evaluations % update_status_every == 0:
+            if fmin_changed or (num_evaluations % update_status_every) == 0:
                 print "Number of evaluations %d, current fmin: %f" % (num_evaluations, current_fmin)
             runtime = time.clock() - start
 
