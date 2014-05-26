@@ -25,6 +25,7 @@ class SMACRunner(object):
                  x0_int, xmin_int, xmax_int,
                  x_categorical,
                  port, max_evaluations, seed,
+                 cutoff_time,
                  rf_num_trees,
                  rf_full_tree_bootstrap,
                  intensification_percentage
@@ -42,6 +43,7 @@ class SMACRunner(object):
             port: the port to communicate with SMACRemote
             max_evaluations: the maximum number of evaluations
 
+            cutoff_time: CPU time before cut off
             rf_num_trees: number of trees to create in random forest.
             rf_full_tree_bootstrap: bootstrap all data points into trees.
             intensification_percentage: percent of time to spend intensifying versus model learning.
@@ -60,6 +62,7 @@ class SMACRunner(object):
         self._max_evaluations = max_evaluations
         self._seed = seed
 
+        self._cutoff_time = cutoff_time
         self._rf_num_trees = rf_num_trees
         self._rf_full_tree_bootstrap = rf_full_tree_bootstrap
         self._intensification_percentage = intensification_percentage
@@ -115,7 +118,8 @@ class SMACRunner(object):
         """
         parameters = {'working_dir': self._working_dir,
                       'exec_dir': self._exec_dir,
-                      'out_dir': self._out_dir}
+                      'out_dir': self._out_dir,
+                      'cutoff_time': self._cutoff_time}
         fdata = """
 algo = echo 0
 execdir = %(exec_dir)s
@@ -124,7 +128,7 @@ deterministic = 1
 rungroup = result
 run_obj = quality
 overall_obj = mean
-cutoff_time = 18000
+cutoff_time = %(cutoff_time)d
 cutoff_length = max
 validation = false
 paramfile = %(working_dir)s/params.pcs

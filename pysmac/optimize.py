@@ -76,9 +76,10 @@ def fmin(objective,
                             x0_int, xmin_int, xmax_int,
                             x_categorical,
                             smacremote.port, max_evaluations, seed,
-                            smac_rf_num_trees,
-                            smac_rf_full_tree_bootstrap,
-                            smac_intensification_percentage)
+                            cutoff_time=86400,
+                            rf_num_trees=smac_rf_num_trees,
+                            rf_full_tree_bootstrap=smac_rf_full_tree_bootstrap,
+                            intensification_percentage=smac_intensification_percentage)
     current_fmin = None
     num_evaluations = 0
 
