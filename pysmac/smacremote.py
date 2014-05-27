@@ -2,7 +2,7 @@ import socket
 import sys
 import logging
 
-from pysmac.smacparse import parse_smac_param_string
+from pysmac.smacparse import parse_smac_param_string, parse_smac_cv_fold
 
 class SMACRemote(object):
     IP = "127.0.0.1"
@@ -60,14 +60,27 @@ class SMACRemote(object):
         logging.debug("< " + str(data))
         return data
 
+    def next(self):
+        """
+            Fetch the next input from SMAC.
+        """
+        self._next_param_string = self.receive()
+
     def get_next_parameters(self):
         """
-            Fetch the next set of parameters.
+            Extract the next set of parameters.
 
             returns: an array of parameters.
         """
-        param_string = self.receive()
-        return parse_smac_param_string(param_string)
+        return parse_smac_param_string(self._next_param_string)
+
+    def get_next_fold(self):
+        """
+            Extract the next fold.
+
+            returns: the index of the next fold
+        """
+        return parse_smac_cv_fold(self._next_param_string)
     
     def report_performance(self, performance, runtime):
         """

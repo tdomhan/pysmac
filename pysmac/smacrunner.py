@@ -44,6 +44,7 @@ class SMACRunner(object):
                  x0_int, xmin_int, xmax_int,
                  x_categorical,
                  port, max_evaluations, seed,
+                 cv_folds,
                  cutoff_time,
                  rf_num_trees,
                  rf_full_tree_bootstrap,
@@ -80,6 +81,7 @@ class SMACRunner(object):
         self._port = port
         self._max_evaluations = max_evaluations
         self._seed = seed
+        self._cv_folds = cv_folds
 
         self._cutoff_time = cutoff_time
         self._rf_num_trees = rf_num_trees
@@ -160,7 +162,11 @@ instance_file = %(working_dir)s/instances.txt
     def _generate_instance_file(self):
         instance_file_name = os.path.join(self._working_dir, "instances.txt")
         with open(instance_file_name, "w") as instance_file:
-            instance_file.write("instance0")
+            if self._cv_folds is None:
+                instance_file.write("cvfold-0")
+            else:
+                for i in range(0, self._cv_folds):
+                    instance_file.write("cvfold-%d\n" % i)
             
     def _generate_parameter_file(self):
         param_definitions = []

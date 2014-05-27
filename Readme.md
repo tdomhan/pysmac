@@ -95,6 +95,19 @@ xmin, fval = fmin(minfunc, x0=(0,0),xmin=(-5, 0), xmax=(10, 15),
 ```
 
 
+### Cross-validation
+
+SMAC can run CV-folds intelligently, that is if a parameter configuration does not perform well a subset of the CV folds it can choose to evaluate other configurations rather than first running all the other folds, which will save time. In order to use this feature, just specify the `cv_folds` parameter as well add an `cv_fold` parameter to the objective function:
+
+```python
+
+def minfunc(x, cv_fold):
+    #...
+    return somevalue
+
+xmin, fval = fmin(minfunc, x0=(0,0),xmin=(-5, 0), xmax=(10, 15), cv_folds=10, max_evaluations=5000)
+```
+
 ### Integer parameters
 Integer parameters can be encoded as follows:
 ```python

@@ -31,6 +31,7 @@ def fmin(objective,
          x_categorical={},
          custom_args={},
          max_evaluations=100, seed=1,
+         cv_folds=None,
          update_status_every=500,
          smac_rf_num_trees=100,
          smac_rf_full_tree_bootstrap=True,
@@ -52,6 +53,7 @@ def fmin(objective,
         custom_args: a dict of custom arguments to the objective function
         max_evaluations: the maximum number of evaluations to execute
         seed: the seed that SMAC is initialized with
+        cv_folds: set if you want to use cross-validation. The objective function will get an new `cv_fold` argument.
         update_status_every: the number of num_evaluationss, between status updates
 
         Advanced
@@ -68,6 +70,11 @@ def fmin(objective,
     x0_int, xmin_int, xmax_int = format_params(x0_int, xmin_int, xmax_int, np.int)
     check_param_dimensions(x0_int, xmin_int, xmax_int)
 
+    if cv_folds is not None:
+        assert cv_folds > 1, "cv_folds needs to be either None or greater than 1."
+
+    #check_objective_function(objective, )
+
     check_categorical_params(x_categorical)
 
     smacremote = SMACRemote()
@@ -76,6 +83,7 @@ def fmin(objective,
                             x0_int, xmin_int, xmax_int,
                             x_categorical,
                             smacremote.port, max_evaluations, seed,
+                            cv_folds=cv_folds,
                             cutoff_time=86400,
                             rf_num_trees=smac_rf_num_trees,
                             rf_full_tree_bootstrap=smac_rf_full_tree_bootstrap,
@@ -86,10 +94,12 @@ def fmin(objective,
     try:
         while not smacrunner.is_finished():
             try:
-                params = smacremote.get_next_parameters()
+                params = smacremote.next()
             except timeout:
                 #Timeout, check if the runner is finished
                 continue
+            params = smacremote.get_next_parameters()
+            fold = smacremote.get_next_fold()
 
             start = time.clock()
             assert all([param not in custom_args.keys() for param in params.keys()]), ("Naming collision between"
@@ -97,12 +107,17 @@ def fmin(objective,
             function_args = {}
             function_args.update(params)
             function_args.update(custom_args)
+            if cv_folds is not None:
+                function_args["cv_fold"] = fold
 
             performance = objective(**function_args)
             num_evaluations += 1
 
             assert performance is not None, ("objective function did not return "
                 "a result for parameters %s" % str(function_args))
+            assert np.isreal(performance), ("objective function did not return a number: "
+                 + str(performance))
+
             if current_fmin is None or performance < current_fmin:
                 current_fmin = performance
                 fmin_changed = True
