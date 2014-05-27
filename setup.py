@@ -44,7 +44,7 @@ check_java_version()
 
 setup(
     name = "pysmac",
-    version = "0.5",
+    version = "0.7",
     packages = find_packages(),
     install_requires = ['numpy', 'docutils>=0.3', 'setuptools'],
     author = "Tobias Domhan (python wrapper). Frank Hutter, Holger Hoos, Kevin Leyton-Brown, Kevin Murphy and Steve Ramage (SMAC)",
