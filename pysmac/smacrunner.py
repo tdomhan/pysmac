@@ -37,7 +37,7 @@ class SMACRunner(object):
         see: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/
     """
 
-    SMAC_VERSION = "smac-v2.08.00-development-676"
+    SMAC_VERSION = "smac-v2.08.00-development-723"
 
     def __init__(self,
                  x0, xmin, xmax,

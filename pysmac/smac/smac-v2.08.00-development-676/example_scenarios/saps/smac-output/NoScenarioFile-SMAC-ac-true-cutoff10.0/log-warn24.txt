@@ -1,6 +1,0 @@
-13:30:35.076 [main] WARN  c.u.c.b.a.l.ComplexLoggingOptions - The console has been set to be more verbose than the log. This is generally an error, except if you have modified the logback.xml to have certain loggers be more specific
-13:31:12.552 [main] ERROR c.u.c.b.a.t.base.ipc.ResponseParser - Target Algorithm Call failed:ruby saps_wrapper.rb instances/train/SWlin2006.19724.cnf 0 1.1326000917434693 2147483647 -1 -alpha '1.0208958536345678' -ps '0.18281406165909078' -rho '0.848754978674851' -wp '0.05944918030136018' 
-Response:Result for Para:nthoent
-Comment: Most likely the algorithm did not specify all of the required outputs that is <solved>,<runtime>,<runlength>,<quality>,<seed>
-13:31:12.552 [main] ERROR c.u.c.b.a.t.base.ipc.ResponseParser - Run will be counted as CRASHED
-13:31:46.623 [main] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 34.066 (secs) that exceeded it's cutoff time of 10.0 (secs) by 24.066000000000003 (secs). Next warning at 25.066000000000003 (secs)  

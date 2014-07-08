@@ -1,8 +1,0 @@
-pcs-file = examples/spear/params.pcs
-runObj = RUNTIME
-cutoffTime = 1
-wallclock-limit = 30
-deterministic = 0
-instance_file = examples/spear/instances-train.txt
-test_instance_file = examples/spear/instances-test.txt
-algo = examples/spear/wrapper.py
