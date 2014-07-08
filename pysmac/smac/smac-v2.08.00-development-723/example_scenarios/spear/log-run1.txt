@@ -1,0 +1,30 @@
+17:53:13.755 [main] DEBUG c.u.c.b.a.l.ComplexLoggingOptions - Logging initialized
+17:53:13.758 [main] INFO  c.u.c.b.a.l.ComplexLoggingOptions - Logging to: /home/sjr/git/SMAC-Java/deployables/example_scenarios/spear/log-run1.txt
+17:53:13.766 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Algorithm Execution & Abstraction Toolkit is v2.08.00dev-development-750 (8b0487f561e8) 
+17:53:13.766 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Java Runtime Environment is OpenJDK 64-Bit Server VM (1.7.0_55) 
+17:53:13.766 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of OS is Linux 3.13.0-30-generic (amd64) 
+17:53:13.766 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Random Forest Library is v1.05.01dev-development-103 (09a591cc9348) 
+17:53:13.766 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of SMAC is v2.08.00dev-development-716 (1e0db8af2bbb) 
+17:53:13.766 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - Parsing (default) options from file: /home/sjr/.aeatk/tae.opt 
+17:53:13.766 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - Parsing (default) options from file: /home/sjr/.aeatk/help.opt 
+17:53:13.767 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - Parsing (default) options from file: /home/sjr/.aeatk/smac.opt 
+17:53:13.767 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - Parsing (default) options from file: /home/sjr/.aeatk/cli-tae.opt 
+17:53:13.767 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - Message: Option File (JCommander @ParameterFile) does not exist: scenario.txt
+17:53:13.767 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Note that some options are read from files in ~/.aeatk/
+17:53:13.771 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - Exception stack trace
+com.beust.jcommander.ParameterException: Option File (JCommander @ParameterFile) does not exist: scenario.txt
+	at com.beust.jcommander.JCommander.parseValues(JCommander.java:993) ~[jcommander.jar:na]
+	at com.beust.jcommander.JCommander.parseValues(JCommander.java:1003) ~[jcommander.jar:na]
+	at com.beust.jcommander.JCommander.parseValues(JCommander.java:862) ~[jcommander.jar:na]
+	at com.beust.jcommander.JCommander.parse(JCommander.java:453) ~[jcommander.jar:na]
+	at com.beust.jcommander.JCommander.parse(JCommander.java:435) ~[jcommander.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.parseCLIOptions(SMACExecutor.java:443) [bin/:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:128) [bin/:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [bin/:na]
+17:53:13.772 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Exiting SMAC with failure. Log: /home/sjr/git/SMAC-Java/deployables/example_scenarios/spear/log-run1.txt
+17:53:13.772 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - For a list of available commands use:  --help
+17:53:13.772 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The Quickstart guide at available at: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/ or alternatively (doc/quickstart.html) gives simple examples for getting up and running.
+17:53:13.772 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The FAQ (doc/faq.pdf) contains commonly asked questions regarding troubleshooting, and usage.
+17:53:13.772 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The Manual (doc/manual.pdf) contains detailed information on file format semantics.
+17:53:13.772 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - If you are stuck, please ask a question in the SMAC forum: https://groups.google.com/forum/#!forum/smac-forum
+17:53:13.772 [main] DEBUG c.u.c.b.smac.executors.SMACExecutor - Returning with value: 255

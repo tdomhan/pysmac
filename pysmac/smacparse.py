@@ -74,7 +74,7 @@ def param_pairs_to_params(param_pairs):
 def parse_smac_param_string(param_string):
     """
         SMAC format:
-            instance0 0 18000.0 2147483647 4 -x0 '6.9846789681200185' -x1 '13.43140264469383'
+            cvfold-0 0 18000.0 2147483647 4 -x0 '6.9846789681200185' -x1 '13.43140264469383'
     """
     param_pieces = param_string.strip().split()[5:]
     param_pairs = [pair for pair in izip(*[iter(param_pieces)]*2)]
@@ -83,6 +83,18 @@ def parse_smac_param_string(param_string):
     params = param_pairs_to_params(param_pairs)
 
     return params
+
+
+def parse_smac_cv_fold(param_string):
+    """
+        SMAC format:
+            cvfold-0 0 18000.0 2147483647 4 -x0 '6.9846789681200185' -x1 '13.43140264469383'
+    """
+    fold_descriptor = param_string.strip().split()[0]
+    if not "cvfold-" in fold_descriptor:
+        logging.warn("failed parsing fold")
+        return 0
+    return int(fold_descriptor.split("-")[1])
 
 
 def parse_smac_trajectory_string(param_string):

@@ -1,0 +1,1 @@
+17:45:30.551 [main] WARN  c.u.c.b.a.l.ComplexLoggingOptions - The console has been set to be more verbose than the log. This is generally an error, except if you have modified the logback.xml to have certain loggers be more specific

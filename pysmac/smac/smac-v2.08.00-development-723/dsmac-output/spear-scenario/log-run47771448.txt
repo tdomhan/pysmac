@@ -1,0 +1,671 @@
+17:45:05.306 [main] DEBUG c.u.c.b.a.l.ComplexLoggingOptions - Logging initialized
+17:45:05.308 [main] INFO  c.u.c.b.a.l.ComplexLoggingOptions - Logging to: /home/sjr/git/SMAC-Java/deployables/dsmac-output/spear-scenario//log-run47771448.txt
+17:45:05.309 [main] WARN  c.u.c.b.a.l.ComplexLoggingOptions - The console has been set to be more verbose than the log. This is generally an error, except if you have modified the logback.xml to have certain loggers be more specific
+17:45:05.320 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Algorithm Execution & Abstraction Toolkit is v2.08.00dev-development-751 (f01d527f6b5f) 
+17:45:05.320 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Java Runtime Environment is OpenJDK 64-Bit Server VM (1.7.0_55) 
+17:45:05.320 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of MySQL Database Target Algorithm Evaluator is v0.92.00dev-development-110 (d37fa6bf035a) 
+17:45:05.321 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of OS is Linux 3.13.0-30-generic (amd64) 
+17:45:05.321 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Random Forest Library is v1.05.01dev-development-103 (09a591cc9348) 
+17:45:05.321 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of dSMAC is v0.91.00dev-development-156 (6ec2341d9bd3) 
+17:45:05.321 [main] INFO  c.u.c.b.a.m.j.JCommanderHelper - Call String: dsmac --scenario-file ./example_scenarios/spear/spear-scenario.txt --cli-cores 4 --bound-runs true --cores 4 --console-log-level DEBUG --algo-cutoff-time 10 
+17:45:05.322 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - ********** The next bit of output can be ignored, it is merely useful for debugging **********
+17:45:05.322 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - ==========Enviroment Variables===========
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-u3fFStiiwi
+DEFAULTS_PATH=/usr/share/gconf/kde-plasma.default.path
+DESKTOP_SESSION=kde-plasma
+DISPLAY=:0
+GDMSESSION=kde-plasma
+GDM_LANG=en_CA
+GNOME_KEYRING_CONTROL=/run/user/1000/keyring-YzmUzq
+GNOME_KEYRING_PID=2713
+GPG_AGENT_INFO=/tmp/gpg-LyAzwi/S.gpg-agent:2938:1
+GS_LIB=/home/sjr/.fonts
+GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/sjr/.gtkrc-2.0:/home/sjr/.kde/share/config/gtkrc-2.0
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/sjr/.gtkrc:/home/sjr/.kde/share/config/gtkrc
+HOME=/home/sjr
+IM_CONFIG_PHASE=1
+INSTANCE=
+JAVA_HOME=/usr/lib/jvm/jdk1.7.0_40
+JOB=dbus
+KDE_FULL_SESSION=true
+KDE_MULTIHEAD=false
+KDE_SESSION_UID=1000
+KDE_SESSION_VERSION=4
+LANG=en_CA.UTF-8
+LANGUAGE=en_CA:en
+LOGNAME=sjr
+MANDATORY_PATH=/usr/share/gconf/kde-plasma.mandatory.path
+MYSQL_DATABASE=mysql_db_tae
+MYSQL_HOSTNAME=arrowdb.cs.ubc.ca
+MYSQL_PASSWORD=october-127
+MYSQL_POOL=dsmac_arrow
+MYSQL_PORT=4040
+MYSQL_RUN_PARTITION=1
+MYSQL_USERNAME=mysql_db_tae
+NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+PAM_KWALLET_LOGIN=/tmp//sjr.socket
+PATH=/home/sjr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/jdk1.7.0_40/bin:/home/sjr/.rvm/bin
+PWD=/home/sjr
+QT_PLUGIN_PATH=/home/sjr/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/
+SELINUX_INIT=YES
+SESSION=kde-plasma
+SESSIONTYPE=
+SESSION_MANAGER=local/hilbert:@/tmp/.ICE-unix/3153,unix/hilbert:/tmp/.ICE-unix/3153
+SHELL=/bin/bash
+SSH_AGENT_LAUNCHER=upstart
+SSH_AGENT_PID=2937
+SSH_AUTH_SOCK=/tmp/ssh-GbVERl3UgSxv/agent.2936
+TEXTDOMAIN=im-config
+TEXTDOMAINDIR=/usr/share/locale/
+UBUNTU_MENUPROXY=libappmenu.so
+UPSTART_EVENTS=started xsession
+UPSTART_INSTANCE=
+UPSTART_JOB=startkde
+UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/2716
+USER=sjr
+XAUTHORITY=/tmp/kde-sjr/xauth-1000-_0
+XCURSOR_THEME=default
+XDG_CONFIG_DIRS=/etc/xdg/xdg-kde-plasma:/usr/share/upstart/xdg:/etc/xdg
+XDG_CURRENT_DESKTOP=KDE
+XDG_DATA_DIRS=/usr/share:/usr/share/kde-plasma:/usr/local/share/:/usr/share/
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/sjr
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_SEAT=seat0
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+XDG_SESSION_ID=c2
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_VTNR=7
+XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+
+17:45:05.323 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - Hostname:hilbert
+17:45:05.323 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - ==========System Properties==============
+ERRLOG=/home/sjr/git/SMAC-Java/deployables/dsmac-output/spear-scenario//log-err47771448.txt
+NUMRUN=47771448
+OUTPUTDIR=/home/sjr/git/SMAC-Java/deployables/dsmac-output/spear-scenario/
+ROOT-LEVEL=DEBUG
+RUNLOG=/home/sjr/git/SMAC-Java/deployables/dsmac-output/spear-scenario//log-run47771448.txt
+STDOUT-LEVEL=DEBUG
+WARNLOG=/home/sjr/git/SMAC-Java/deployables/dsmac-output/spear-scenario//log-warn47771448.txt
+awt.toolkit=sun.awt.X11.XToolkit
+file.encoding=UTF-8
+file.encoding.pkg=sun.io
+file.separator=/
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+java.awt.printerjob=sun.print.PSPrinterJob
+java.class.path=/home/sjr/git/dSMAC/bin:/home/sjr/git/AEATK/bin:/home/sjr/git/AEATK/lib/commons-collections-3.2.1.jar:/home/sjr/git/AEATK/lib/commons-math-2.2.jar:/home/sjr/git/AEATK/lib/opencsv-2.3.jar:/home/sjr/git/AEATK/lib/spi-0.2.4.jar:/home/sjr/git/AEATK/lib/jcip-annotations.jar:/home/sjr/git/AEATK/lib/Jama-1.0.2.jar:/home/sjr/git/AEATK/lib/numerics4j-1.3.jar:/home/sjr/git/AEATK/lib/guava-14.0.1.jar:/home/sjr/git/AEATK/lib/exp4j-0.3.10.jar:/home/sjr/git/AEATK/lib/commons-math3-3.2.jar:/home/sjr/git/AEATK/lib/commons-io-2.1.jar:/home/sjr/git/AEATK/lib/slf4j-api-1.7.5.jar:/home/sjr/git/AEATK/lib/jackson-annotations-2.3.1.jar:/home/sjr/git/AEATK/lib/jackson-core-2.3.1.jar:/home/sjr/git/AEATK/lib/jackson-databind-2.3.1.jar:/home/sjr/git/RandomForests/bin:/opt/eclipse/plugins/org.junit_4.11.0.v201303080030/junit.jar:/opt/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar:/home/sjr/git/AEATK/lib/logback-access-1.0.13.jar:/home/sjr/git/AEATK/lib/logback-classic-1.0.13.jar:/home/sjr/git/AEATK/lib/logback-core-1.0.13.jar:/home/sjr/git/AEATK/lib/jcommander.jar:/home/sjr/git/MySQLDBTAE/bin:/home/sjr/git/MySQLDBTAE/lib/commons-codec-1.7.jar:/home/sjr/git/MySQLDBTAE/lib/mchange-commons-java-0.2.3.3.jar:/home/sjr/git/MySQLDBTAE/lib/c3p0-0.9.2-pre8.jar:/home/sjr/git/MySQLDBTAE/lib/mysql-connector-java-5.1.26-bin.jar:/home/sjr/git/MySQLDBTAE/lib/c3p0-oracle-thin-extras-0.9.2-pre8.jar:/home/sjr/git/AEATK/lib/DomainInter.jar:/home/sjr/git/AEATK/lib/exp4j-0.3.10-sources.jar:/home/sjr/git/AEATK/lib/guava-14.0.1-sources.jar:/home/sjr/git/AEATK/lib/jcip-annotations-src.jar
+java.class.version=51.0
+java.endorsed.dirs=/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/endorsed
+java.ext.dirs=/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+java.io.tmpdir=/tmp
+java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+java.runtime.name=OpenJDK Runtime Environment
+java.runtime.version=1.7.0_55-b14
+java.specification.name=Java Platform API Specification
+java.specification.vendor=Oracle Corporation
+java.specification.version=1.7
+java.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+java.version=1.7.0_55
+java.vm.info=mixed mode
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.7
+java.vm.vendor=Oracle Corporation
+java.vm.version=24.51-b03
+line.separator=
+
+logback.configurationFile=ca/ubc/cs/beta/aeatk/logging/complex-logback.xml
+os.arch=amd64
+os.name=Linux
+os.version=3.13.0-30-generic
+path.separator=:
+sun.arch.data.model=64
+sun.boot.class.path=/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+sun.boot.library.path=/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+sun.cpu.endian=little
+sun.cpu.isalist=
+sun.io.unicode.encoding=UnicodeLittle
+sun.java.command=ca.ubc.cs.beta.dsmac.executor.DSMACExecutor --scenario-file ./example_scenarios/spear/spear-scenario.txt --cli-cores 4 --bound-runs true --cores 4 --console-log-level DEBUG --algo-cutoff-time 10
+sun.java.launcher=SUN_STANDARD
+sun.jnu.encoding=UTF-8
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level=unknown
+user.country=CA
+user.dir=/home/sjr/git/SMAC-Java/deployables
+user.home=/home/sjr
+user.language=en
+user.name=sjr
+user.timezone=America/Vancouver
+
+17:45:05.350 [main] INFO  c.u.c.b.dsmac.executor.DSMACExecutor - ==========Configuration Options==========
+[DSMACOptions]
+ dsmacDefaults = /home/sjr/.aeatk/dsmac.opt
+runGroupOptions = [RunGroupOptions]
+		 runGroupName = %SCENARIO_NAME
+		 runGroupExit = false
+		 replacementChar = %
+
+watchdogOptions = [ThreadWatchDogOptions]
+		 watchDog = false
+		 lastEventDelay = 3600
+		 delayBetweenChecks = 600
+		 delayBeforeShutdown = 600
+		 logThreadActivity = 300
+
+scenarioConfig = [ScenarioOptions]
+		 _runObj = RUNTIME
+		 intraInstanceObj = null
+		 interInstanceObj = MEAN
+		limitOptions = [TerminationCriteriaOptions]
+				 tunerTimeout = 2147483647
+				 numIterations = 2147483647
+				 runtimeLimit = 30
+				 totalNumRunsLimit = 9223372036854775807
+				 countSMACTimeAsTunerTime = true
+				 challengeIncumbentAttempts = 1000
+				 fileToWatch = null
+
+		instanceOptions = [ProblemInstanceOptions]
+				 instanceFile = example_scenarios/spear/instances-train.txt
+				 instanceFeatureFile = null
+				 testInstanceFile = example_scenarios/spear/instances-test.txt
+				 checkInstanceFilesExist = false
+				 useInstances = true
+				 instanceSuffix = null
+				 testInstanceSuffix = null
+				 ignoreFeatures = false
+
+		 scenarioFile = /home/sjr/git/SMAC-Java/deployables/./example_scenarios/spear/spear-scenario.txt
+		 outputDirectory = /home/sjr/git/SMAC-Java/deployables/dsmac-output
+		 invalidScenarioReason = null
+		algoExecOptions = [AlgorithmExecutionOptions]
+				 algoExec = example_scenarios/spear/wrapper.py
+				 algoExecDir = /home/sjr/git/SMAC-Java/deployables
+				 deterministic = false
+				 cutoffTime = 10.0
+				 cutoffLength = -1.0
+				 additionalContext = {}
+				taeOpts = [TargetAlgorithmEvaluatorOptions]
+						 targetAlgorithmEvaluator = CLI
+						 abortOnCrash = false
+						 abortOnFirstRunCrash = true
+						 retryCount = 0
+						 cacheRuns = false
+						 cacheDebug = false
+						 useDynamicCappingExclusively = false
+						 reportStrictlyIncreasingRuntimes = false
+						 boundRuns = true
+						 maxConcurrentAlgoExecs = 4
+						 runHashCodeFile = null
+						 leakMemory = false
+						 leakMemoryAmount = 1024
+						 verifySAT = null
+						 checkSATConsistency = true
+						 checkSATConsistencyException = true
+						 callObserverBeforeCompletion = true
+						prePostOptions = [PrePostCommandOptions]
+								 preCommand = null
+								 postCommand = null
+								 exceptionOnError = false
+								 logOutput = true
+								 directory = /home/sjr/git/SMAC-Java/deployables/.
+
+						 checkResultOrderConsistent = false
+						 skipOutstandingEvaluationsTAE = false
+						 logRequestResponses = false
+						 logRequestResponsesRCOnly = false
+						 trackRunsScheduled = false
+						 trackRunsScheduledResolution = 1.0
+						 uncleanShutdownCheck = true
+						 killCaptimeExceedingRun = true
+						 killCaptimeExceedingRunFactor = 10.0
+						 checkRunConfigsUnique = true
+						 checkRunConfigsUniqueException = true
+						 observeWalltimeIfNoRuntime = true
+						 observeWalltimeScale = 0.95
+						 observeWalltimeDelay = 5.0
+						 synchronousObserver = true
+						 taeDefaults = /home/sjr/.aeatk/tae.opt
+						ttaedo = [TransformTargetAlgorithmEvaluatorDecoratorOptions]
+								 transform = false
+								 transformValidValuesOnly = true
+								 SAT_runtime_transform = R
+								 SAT_quality_transform = Q
+								 UNSAT_runtime_transform = R
+								 UNSAT_quality_transform = Q
+								 TIMEOUT_runtime_transform = R
+								 TIMEOUT_quality_transform = Q
+								 other_runtime_transform = R
+								 other_quality_transform = Q
+
+						tForkOptions = [ForkingTargetAlgorithmEvaluatorDecoratorOptions]
+								 forkToTAE = null
+								fPolicyOptions = [ForkingTargetAlgorithmEvaluatorDecoratorPolicyOptions]
+										 fPolicy = null
+										 duplicateOnSlaveQuickTimeout = 5
+
+
+						 fileToWatch = null
+						 warnIfNoResponseFromTAE = 120
+						 taeStopProcessingOnShutdown = true
+
+				paramFileDelegate = [ParamConfigurationSpaceOptions]
+						 paramFile = example_scenarios/spear/params.pcs
+						 searchSubspace = null
+						 searchSubspaceFile = null
+						 continuousNeighbours = 4
+
+
+
+randomForestOptions = [RandomForestOptions]
+		 brokenVarianceCalculation = false
+		 freeMemoryPercentageToSubsample = 0.25
+		 fullTreeBootstrap = false
+		 ignoreConditionality = false
+		 imputeMean = false
+		 logModel = true
+		 minVariance = 1.0E-14
+		 numTrees = 10
+		 penalizeImputedValues = false
+		 preprocessMarginal = true
+		 ratioFeatures = 0.8333333333333334
+		 shuffleImputedValues = false
+		 splitMin = 10
+		 storeDataInLeaves = false
+		 subsamplePercentage = 0.9
+		 subsampleValuesWhenLowMemory = false
+
+seedOptions = [SeedOptions]
+		 seedOffset = 0
+		 numRun = 47771448
+		 initialSeedMap = {}
+
+ experimentDir = /home/sjr/git/SMAC-Java/deployables/
+ numPCA = 7
+ expFunc = EXPONENTIAL
+ numberOfChallengers = 20
+ numberOfRandomConfigsInEI = 1
+ execMode = SMAC
+ adaptiveCapping = true
+ dynamicAdaptiveCapping = true
+ capSlack = 1.3
+ capAddSlack = 1.0
+ imputationIterations = 2
+ maxIncumbentRuns = 2000
+ maxIncumbentBatchSize = 20
+ initialChallengeRuns = 1
+ intensificationPercentage = 0.5
+loggingOptions = [ComplexLoggingOptions]
+		 consoleLogLevel = DEBUG
+		 logLevel = INFO
+
+ maskInactiveConditionalParametersAsDefaultValue = true
+ optionFile = null
+ optionFile2 = null
+ modelBufferSize = 10000
+help = [HelpOptions]
+		 showHiddenParameters = false
+		 showHelp = false
+		 helpLevel = BASIC
+		 showVersion = false
+		 helpDefaults = /home/sjr/.aeatk/help.opt
+
+ initialIncumbent = DEFAULT
+ maskCensoredDataAsUncensored = false
+ stateSerializer = LEGACY
+ deterministicInstanceOrdering = false
+ randomSelector = true
+ modelSelector = true
+ localSelector = false
+classicInitModeOpts = [ClassicInitializationProcedureOptions]
+		 initialIncumbentRuns = 1
+
+dciModeOpts = [DoublingCappingInitializationProcedureOptions]
+		 numberOfChallengers = 2
+		 numberOfRunsPerChallenger = 2
+
+ucip = [UnbiasChallengerInitializationProcedureOptions]
+		 numberOfChallengers = 2
+		 numberOfRunsPerChallenger = 2
+		 cpulimit = 0
+
+ initializationMode = CLASSIC
+ challengesPerIncumbentRun = 1.0
+
+17:45:05.355 [main] DEBUG c.u.c.b.a.p.s.RandomInstanceSeedGenerator - Initializing Instance Seed PRNG with Seed -295952116 and 2147483647 allowed seeds
+17:45:05.356 [main] DEBUG c.u.c.b.a.p.s.RandomInstanceSeedGenerator - Re-Initializing Instance Seed PRNG with Seed -295952116 and instances 5 
+17:45:05.358 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Instances loaded from file named: example_scenarios/spear/instances-train.txt
+17:45:05.359 [main] DEBUG c.u.c.b.a.p.s.RandomInstanceSeedGenerator - Initializing Instance Seed PRNG with Seed -346776413 and 2147483647 allowed seeds
+17:45:05.359 [main] DEBUG c.u.c.b.a.p.s.RandomInstanceSeedGenerator - Re-Initializing Instance Seed PRNG with Seed -346776413 and instances 5 
+17:45:05.360 [main] DEBUG c.u.c.b.a.p.ProblemInstanceHelper - Instances loaded from file named: example_scenarios/spear/instances-test.txt
+17:45:05.363 [main] DEBUG c.u.c.b.dsmac.executor.DSMACExecutor - JVM Supports CPU Timing Measurements
+17:45:05.381 [main] DEBUG c.u.c.b.dsmac.builder.DSMACBuilder - Instance Specific Information is NOT compatible with Verifying SAT, disabling option
+17:45:05.381 [main] DEBUG c.u.c.b.dsmac.builder.DSMACBuilder - Parsing Parameter Space File
+17:45:05.465 [main] DEBUG c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - [TAE] Using walltime as observer runtime if no runtime is reported, scale 0.95 , delay 5.0 (secs)
+17:45:05.470 [main] DEBUG c.u.c.b.a.t.i.TargetAlgorithmEvaluatorBuilder - Final Target Algorithm Built is SynchronousObserverTargetAlgorithmEvaluatorDecorator( 0x4c4d89ab ) ==> [ CallObserverBeforeCompletionTargetAlgorithmEvaluatorDecorator( 0x768960af ) ==> [ WarnOnNoWallOrRuntimeTargetAlgorithmEvaluatorDecorator( 0x352abdf5 ) ==> [ KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator( 0x91d3b18 ) ==> [ CheckForDuplicateRunConfigDecorator( 0x5e12a954 ) ==> [ OutstandingEvaluationsTargetAlgorithmEvaluatorDecorator( 0x1b2afa0c ) ==> [ PrePostCommandTargetAlgorithmEvaluator( 0x228637c3 ) ==> [ TimingCheckerTargetAlgorithmEvaluator( 0x19b6f4ea ) ==> [ WalltimeAsRuntimeTargetAlgorithmEvaluatorDecorator( 0x3a893bd6 ) ==> [ BoundedTargetAlgorithmEvaluator( 0x7b77ca0 ) ==> [ JVMShutdownBlockerTargetAlgorithmEvaluatorDecorator( 0x1f56f055 ) ==> [ SATConsistencyTargetAlgorithmEvaluator( 0x4bc6c86 ) ==> [ AbortOnFirstRunCrashTargetAlgorithmEvaluator( 0x6e78d3d7 ) ==> [ UncleanShutdownDetectingTargetAlgorithmEvaluator( 0x3e9c00ea ) ==> [ CommandLineTargetAlgorithmEvaluator ] ] ] ] ] ] ] ] ] ] ] ] ] ]
+17:45:05.475 [main] DEBUG c.u.c.b.d.c.DistributedAutomaticConfigurator - Maximimum Number of Runs for the Incumbent Initialized to 2000
+17:45:05.479 [main] INFO  c.u.c.b.d.c.DistributedAutomaticConfigurator - dSMAC started at: 1-Jul-2014 5:45:05 PM. Minimizing penalized average runtime (PAR10).
+17:45:05.486 [main] DEBUG c.u.c.b.a.i.c.ClassicInitializationProcedure - Using Classic Initialization
+17:45:05.487 [main] DEBUG c.u.c.b.a.i.c.ClassicInitializationProcedure - Scheduling default configuration for 1 runs
+17:45:05.491 [main] DEBUG c.u.c.b.a.i.c.ClassicInitializationProcedure - Initialization: Scheduling 1 run(s):
+17:45:05.492 [main] DEBUG c.u.c.b.a.i.c.ClassicInitializationProcedure - Initialization: Scheduling run for config (0x000A) on instance 1 with seed 1595174 and captime 10.0
+17:45:05.514 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 22798 (Environment Variable: eaa0938a-f067-47f8-9371-ad9de7f1802f)
+17:45:05.572 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.00820183753967, 0.0, 0.0, 1595174> W:(0.035) is completed
+17:45:05.578 [main] DEBUG c.u.c.b.a.i.c.ClassicInitializationProcedure - Initialization: Completed run for config (0x000A) on instance 1 with seed 1595174 and captime 10.0 => Result: SAT, 0.00820183753967, 0.0, 0.0, 1595174, wallclock time: 0.035 seconds
+17:45:05.590 [main] INFO  c.u.c.b.d.c.DistributedAutomaticConfigurator - First incumbent: config 1 (internal ID: 0x000A), with penalized average runtime (PAR10): 0.00820183753967; estimate based on 1 runs.
+17:45:05.609 [main] INFO  c.u.c.b.d.c.helpers.IncumbentManager - Sample call for new incumbent config 1 (internal ID: 0x000A): 
+cd /home/sjr/git/SMAC-Java/deployables; example_scenarios/spear/wrapper.py example_scenarios/spear/instances/train/qcplin2006.10085.cnf 0 10.0 2147483647 1595174 -sp-clause-activity-inc '1.0' -sp-clause-decay '1.4' -sp-clause-del-heur '2' -sp-first-restart '100' -sp-learned-clause-sort-heur '0' -sp-learned-clauses-inc '1.3' -sp-learned-size-factor '0.4' -sp-max-res-lit-inc '1.0' -sp-max-res-runs '4' -sp-orig-clause-sort-heur '0' -sp-phase-dec-heur '5' -sp-rand-phase-dec-freq '0.001' -sp-rand-phase-scaling '1.0' -sp-rand-var-dec-freq '0.001' -sp-rand-var-dec-scaling '1.0' -sp-res-cutoff-cls '8' -sp-res-cutoff-lits '400' -sp-res-order-heur '0' -sp-resolution '1' -sp-restart-inc '1.5' -sp-update-dec-queue '1' -sp-use-pure-literal-rule '1' -sp-var-activity-inc '1.0' -sp-var-dec-heur '0' -sp-variable-decay '1.4'  
+17:45:05.610 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.612 [Model Point Selector Queue Handoff Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Model Queue has 0 elements 
+17:45:05.612 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Building model with 1 new runs 
+17:45:05.617 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest with 0 censored runs out of 1 total 
+17:45:05.624 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest took 0.005 seconds 
+17:45:05.626 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.627 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.630 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.630 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x000D) up to a total bound of 0.00920183753967 
+17:45:05.631 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.d.c.h.IncumbentManager$IncumbentRunner - Scheduling 1 runs
+17:45:05.632 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent blocked; 1 total. 
+17:45:05.632 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:2, Seed:10709352, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:05.638 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x000D) (0x000D) has times in (ms) queuePull: 15 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 5, runsSubmitted: 1
+17:45:05.642 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:10709352, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 22822 (Environment Variable: 91fe351c-799a-43df-a88b-1fe14310a562)
+17:45:05.647 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x000F) up to a total bound of 0.00920183753967 
+17:45:05.647 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.648 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent blocked; 2 total. 
+17:45:05.649 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x000F) (0x000F) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 1, runsSubmitted: 1
+17:45:05.654 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.656 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0011) up to a total bound of 0.00920183753967 
+17:45:05.661 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x000D, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22827 (Environment Variable: 22650e62-a96f-4343-9c54-e8168f5fd282)
+17:45:05.666 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent blocked; 3 total. 
+17:45:05.667 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0011) (0x0011) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 11, taeSubmitTime: 1, runsSubmitted: 1
+17:45:05.679 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.682 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x000F, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22835 (Environment Variable: 4173ee60-54d8-4529-a0c8-97d74f5fcf91)
+17:45:05.683 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0015) up to a total bound of 0.00920183753967 
+17:45:05.684 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent blocked; 4 total. 
+17:45:05.694 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x0011, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22838 (Environment Variable: 9198b051-5d6d-4c0f-b362-212f7fc79c03)
+17:45:05.734 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x000F, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0178279876709, 0.0, 0.0, 1595174> W:(0.049) is completed
+17:45:05.735 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0015) (0x0015) has times in (ms) queuePull: 0 , challengersLock: 1, runHistoryLock: 0, processingTime: 1, taeSubmitTime: 51, runsSubmitted: 1
+17:45:05.739 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.740 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0018) up to a total bound of 0.00920183753967 
+17:45:05.741 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent blocked; 5 total. 
+17:45:05.741 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x0015, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22857 (Environment Variable: 8359f241-b5fc-46f6-9bb6-1abdca91d6cd)
+17:45:05.747 [Bounded Target Algorithm Evaluator Callback Thread (5-1)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent unblocked; 4 remaining.
+17:45:05.748 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:10709352, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0284450054169, 0.0, 0.0, 10709352> W:(0.079) is completed
+17:45:05.748 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x0011, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.00967001914978, 0.0, 0.0, 1595174> W:(0.049) is completed
+17:45:05.749 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0018) (0x0018) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 1, taeSubmitTime: 8, runsSubmitted: 1
+17:45:05.751 [Bounded Target Algorithm Evaluator Callback Thread (5-4)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:05.751 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.e.h.LogRuntimeStatistics - Runtime Statistics are Not Available because we haven't seen an Incumbent Performance Changed Event yet
+17:45:05.751 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.e.h.LogRuntimeStatistics - Runtime Statistics are Not Available because we haven't seen an Incumbent Performance Changed Event yet
+17:45:05.755 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.756 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Too many runs have been scheduled (atleast 5), releasing some permits in spite of blocks 4, and increasing next threshold to (8)
+17:45:05.756 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.d.c.h.IncumbentManager$IncumbentRunner - Scheduling 2 runs
+17:45:05.756 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0019) up to a total bound of 0.00920183753967 
+17:45:05.757 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:3, Seed:6367969, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:05.757 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:4, Seed:5844858, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:05.760 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent blocked; 5 total. 
+17:45:05.760 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x0018, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22865 (Environment Variable: 5e9b250d-3325-4067-a10d-1650617636e1)
+17:45:05.761 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:3, Seed:6367969, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 22869 (Environment Variable: 5ec1de57-314d-425b-abe3-4ca7bd2c2204)
+17:45:05.761 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent unblocked; 4 remaining.
+17:45:05.784 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x000D, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0212919712067, 0.0, 0.0, 1595174> W:(0.09) is completed
+17:45:05.791 [Bounded Target Algorithm Evaluator Callback Thread (5-4)] DEBUG c.u.c.b.d.c.ChallengeConsumer - Challenger -1 (0x000D) has a performance bound of 0.010629582405129, incumbent has bound of 0.00920183753967, dynamically adaptive capping
+17:45:05.796 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:4, Seed:5844858, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 22876 (Environment Variable: 6b4e5490-9de5-4676-aa22-2a2f0594c5c0)
+17:45:05.797 [Event Manager Dispatch Thread] DEBUG c.u.c.b.a.e.h.LogRuntimeStatistics - *****Developer Statistics*****
+ Count: 1
+ Incumbent ID: 1 (internal ID:0x000A)
+ Number of PISPs for Incumbent: 2
+ Number of Instances for Incumbent: 2
+ Number of Configurations Run: 3
+ Performance of the Incumbent: 0.018
+ Number of Challenges Started: 6
+ Number of Challenges Oustanding:3
+ Configuration Time Budget used: 0.81 s (0%)
+ Configuration Time Budget remaining: 2.15E9 s
+ Wall-clock Time Budget used: 0.37 s (1%)
+ Wall-clock Time Budget remaining: 29.63 s
+ Algorithm Runs used: 5.00  (0%)
+ Algorithm Runs remaining: 9.22E18 
+ Model/Iteration used: 1.00  (0%)
+ Model/Iteration remaining: 2.15E9 
+ Sum of Target Algorithm Execution Times (treating minimum value as 0.1): 0.400 s
+ CPU time of Configurator: 0.306 s
+ User time of Configurator: 0.305 s
+ Outstanding Runs on Target Algorithm Evaluator: 6
+ Outstanding Requests on Target Algorithm Evaluator: 5
+ Total Reported Algorithm Runtime: 0.064 s
+ Sum of Measured Wallclock Runtime: 0.212 s
+ Max Memory: 3506 MB
+ Total Java Memory: 236 MB
+ Free Java Memory: 214 MB
+ * PISP count is roughly the number of runs, but doesn't included redundant runs on the same problem instance & seed
+17:45:05.798 [Bounded Target Algorithm Evaluator Callback Thread (5-4)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent unblocked; 3 remaining.
+17:45:05.831 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x0018, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0145962238312, 0.0, 0.0, 1595174> W:(0.068) is completed
+17:45:05.832 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0019) (0x0019) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 4, taeSubmitTime: 72, runsSubmitted: 1
+17:45:05.836 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x001B) up to a total bound of 0.0294450054169 
+17:45:05.837 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.840 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x0019, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22884 (Environment Variable: edd680b5-3b74-49d8-aa01-ac4039a23547)
+17:45:05.855 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent unblocked; 2 remaining.
+17:45:05.856 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x0015, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0276141166687, 0.0, 0.0, 1595174> W:(0.106) is completed
+17:45:05.858 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x001B) (0x001B) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 20, runsSubmitted: 1
+17:45:05.861 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x001D) up to a total bound of 0.00920183753967 
+17:45:05.861 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.865 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.d.c.ChallengeConsumer - Challenger -1 (0x0015) has a performance bound of 0.016951727867129, incumbent has bound of 0.00920183753967, dynamically adaptive capping
+17:45:05.876 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent unblocked; 1 remaining.
+17:45:05.883 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:10709352, Config:0x001B, Kappa:1.039578877735138, Execution Config: 0x0001> started with pid: 22890 (Environment Variable: 83bab990-ad21-469e-abb9-1c9465183899)
+17:45:05.911 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:4, Seed:5844858, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0378148555756, 0.0, 0.0, 5844858> W:(0.082) is completed
+17:45:05.912 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x001D) (0x001D) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 49, runsSubmitted: 1
+17:45:05.919 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.920 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x001F) up to a total bound of 0.0294450054169 
+17:45:05.926 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x001D, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22898 (Environment Variable: 9ad3e018-dfa5-4707-b5c1-37f559ecb452)
+17:45:05.953 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:10709352, Config:0x001B, Kappa:1.039578877735138, Execution Config: 0x0001> ==> <SAT, 0.00789594650269, 0.0, 0.0, 10709352> W:(0.07) is completed
+17:45:05.954 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x001F) (0x001F) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 32, runsSubmitted: 1
+17:45:05.961 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0021) up to a total bound of 0.0294450054169 
+17:45:05.961 [Bounded Target Algorithm Evaluator Callback Thread (5-4)] DEBUG c.u.c.b.d.c.RunBatchCompletionTAECallback - Challenger 7 (0x001B) still looks good, will schedule another round of intensification 
+17:45:05.964 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:05.976 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x0019, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0299060344696, 0.0, 0.0, 1595174> W:(0.098) is completed
+17:45:05.977 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0021) (0x0021) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 15, runsSubmitted: 1
+17:45:05.977 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:10709352, Config:0x001F, Kappa:1.039578877735138, Execution Config: 0x0001> started with pid: 22908 (Environment Variable: ba356fe7-a358-4eaf-a6b3-f5742c15484f)
+17:45:05.983 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:10709352, Config:0x0021, Kappa:1.039578877735138, Execution Config: 0x0001> started with pid: 22911 (Environment Variable: 3f4e60bf-b8d7-4e34-a988-7ae9a6335c36)
+17:45:06.010 [Bounded Target Algorithm Evaluator Callback Thread (5-4)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent unblocked; 0 remaining.
+17:45:06.011 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger 7(0x001B) up to a total bound of 0.019323421478285002 
+17:45:06.012 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent blocked; 1 total. 
+17:45:06.023 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x001D, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0156478881836, 0.0, 0.0, 1595174> W:(0.052) is completed
+17:45:06.024 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger 7 (0x001B) (0x001B) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 12, runsSubmitted: 1
+17:45:06.028 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0023) up to a total bound of 0.00920183753967 
+17:45:06.030 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:06.039 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x001B, Kappa:1.0412765968322755, Execution Config: 0x0001> started with pid: 22920 (Environment Variable: 8a2d6141-d0cb-4c91-b7a9-5582b150dee0)
+17:45:06.071 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:10709352, Config:0x0021, Kappa:1.039578877735138, Execution Config: 0x0001> ==> <SAT, 0.0336101055145, 0.0, 0.0, 10709352> W:(0.079) is completed
+17:45:06.072 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0023) (0x0023) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 42, runsSubmitted: 1
+17:45:06.073 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0025) up to a total bound of 0.00920183753967 
+17:45:06.075 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:06.084 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x0023, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22929 (Environment Variable: 9a52c30e-37c4-4798-806d-a5b52efaedfd)
+17:45:06.099 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:10709352, Config:0x001F, Kappa:1.039578877735138, Execution Config: 0x0001> ==> <SAT, 0.0599980354309, 0.0, 0.0, 10709352> W:(0.113) is completed
+17:45:06.102 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0025) (0x0025) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 1, taeSubmitTime: 28, runsSubmitted: 1
+17:45:06.105 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0027) up to a total bound of 0.0294450054169 
+17:45:06.105 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:06.112 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x0025, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22933 (Environment Variable: f7dfcba5-2697-4587-894f-6708875bed80)
+17:45:06.125 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x001B, Kappa:1.0412765968322755, Execution Config: 0x0001> ==> <SAT, 0.0141739845276, 0.0, 0.0, 1595174> W:(0.086) is completed
+17:45:06.126 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0027) (0x0027) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 1, taeSubmitTime: 20, runsSubmitted: 1
+17:45:06.128 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:06.128 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0029) up to a total bound of 0.0294450054169 
+17:45:06.136 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:10709352, Config:0x0027, Kappa:1.039578877735138, Execution Config: 0x0001> started with pid: 22940 (Environment Variable: ab53b8fd-b0f9-4581-b06b-0faf354b07fd)
+17:45:06.163 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x0023, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0330719947815, 0.0, 0.0, 1595174> W:(0.078) is completed
+17:45:06.165 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0029) (0x0029) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 4, taeSubmitTime: 34, runsSubmitted: 1
+17:45:06.172 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.d.c.h.IncumbentManager$RunningState - Challenger 7 (0x001B) seems to dominate 1 (0x000A) scheduling outstanding runs. This is a warning because maybe we should have switched the incumbent here. If this message pops up a lot we might want to optimize this, otherwise it doesn't matter.
+17:45:06.172 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:3, Seed:6367969, Config:0x001B, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.172 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:4, Seed:5844858, Config:0x001B, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.172 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent unblocked; 0 remaining.
+17:45:06.180 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x002B) up to a total bound of 0.00920183753967 
+17:45:06.181 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:06.181 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:10709352, Config:0x0029, Kappa:1.039578877735138, Execution Config: 0x0001> started with pid: 22949 (Environment Variable: 69ad53c8-65c9-4f39-b99a-34efd8461c21)
+17:45:06.193 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x0025, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0221660137177, 0.0, 0.0, 1595174> W:(0.07) is completed
+17:45:06.198 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:3, Seed:6367969, Config:0x001B, Kappa:10.0, Execution Config: 0x0001> started with pid: 22956 (Environment Variable: 75443dfd-77c0-4586-b432-b11e1833fb5b)
+17:45:06.220 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:10709352, Config:0x0027, Kappa:1.039578877735138, Execution Config: 0x0001> ==> <SAT, 0.0168390274048, 0.0, 0.0, 10709352> W:(0.056) is completed
+17:45:06.231 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:4, Seed:5844858, Config:0x001B, Kappa:10.0, Execution Config: 0x0001> started with pid: 22961 (Environment Variable: 431c27f8-447d-4f7e-a4f1-250ab8f90916)
+17:45:06.232 [Bounded Target Algorithm Evaluator Callback Thread (5-6)] DEBUG c.u.c.b.d.c.RunBatchCompletionTAECallback - Challenger 14 (0x0027) still looks good, will schedule another round of intensification 
+17:45:06.239 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:3, Seed:6367969, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.427159070969, 0.0, 0.0, 6367969> W:(0.475) is completed
+17:45:06.239 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x002B) (0x002B) has times in (ms) queuePull: 0 , challengersLock: 1, runHistoryLock: 0, processingTime: 1, taeSubmitTime: 58, runsSubmitted: 1
+17:45:06.242 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x002B, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 22968 (Environment Variable: be55c473-e446-45f8-9771-c25824e577bd)
+17:45:06.247 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger 14(0x0027) up to a total bound of 0.019323421478285002 
+17:45:06.249 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Incumbent blocked; 1 total. 
+17:45:06.250 [Bounded Target Algorithm Evaluator Callback Thread (5-4)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:06.250 [Bounded Target Algorithm Evaluator Callback Thread (5-4)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:06.253 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.d.c.h.IncumbentRunSchedulerCounter - Too many runs have been scheduled (atleast 12), releasing some permits in spite of blocks 1, and increasing next threshold to (16)
+17:45:06.253 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.d.c.h.IncumbentManager$IncumbentRunner - Scheduling 12 runs
+17:45:06.253 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:5, Seed:8226463, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.253 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:4, Seed:14225885, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.254 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:1, Seed:2126895, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.254 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:3, Seed:7372238, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.254 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:5, Seed:14613826, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.254 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:2, Seed:4682682, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.254 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:1, Seed:10391712, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.254 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:3, Seed:13930786, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.254 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:5, Seed:11764924, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.255 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:4, Seed:11895483, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.255 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:2, Seed:9723719, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.255 [DSMAC Component Thread (7-3)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run  Scheduled: <Instance:4, Seed:16442981, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> 
+17:45:06.269 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:10709352, Config:0x0029, Kappa:1.039578877735138, Execution Config: 0x0001> ==> <SAT, 0.0273230075836, 0.0, 0.0, 10709352> W:(0.072) is completed
+17:45:06.270 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger 14 (0x0027) (0x0027) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 21, runsSubmitted: 1
+17:45:06.275 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x0027, Kappa:1.029650591659546, Execution Config: 0x0001> started with pid: 22976 (Environment Variable: 31beda97-0593-4174-bf59-6932c787dab9)
+17:45:06.282 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x002F) up to a total bound of 0.00920183753967 
+17:45:06.284 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:06.287 [Bounded Target Algorithm Evaluator Callback Thread (5-6)] DEBUG c.u.c.b.d.c.RunBatchCompletionTAECallback - Challenger 15 (0x0029) still looks good, will schedule another round of intensification 
+17:45:06.318 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x002B, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0145220756531, 0.0, 0.0, 1595174> W:(0.053) is completed
+17:45:06.327 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:5, Seed:8226463, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 22985 (Environment Variable: 21fb1790-9475-4faf-acbe-93f77df766fa)
+17:45:06.333 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x0027, Kappa:1.029650591659546, Execution Config: 0x0001> ==> <SAT, 0.0106430053711, 0.0, 0.0, 1595174> W:(0.036) is completed
+17:45:06.349 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:4, Seed:14225885, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 22990 (Environment Variable: 647e2996-82d8-414e-9f7b-daa5b8ce865e)
+17:45:06.384 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:4, Seed:5844858, Config:0x001B, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0547919273376, 0.0, 0.0, 5844858> W:(0.112) is completed
+17:45:06.394 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:2126895, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 22996 (Environment Variable: 320c462b-b15b-4996-90b6-3ecab8611c80)
+17:45:06.433 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:5, Seed:8226463, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0338611602783, 0.0, 0.0, 8226463> W:(0.087) is completed
+17:45:06.442 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:3, Seed:7372238, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23004 (Environment Variable: dfcfaea8-65b7-4949-a9c4-6ef877fc5944)
+17:45:06.467 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:2126895, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0166389942169, 0.0, 0.0, 2126895> W:(0.067) is completed
+17:45:06.483 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:5, Seed:14613826, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23012 (Environment Variable: 533ce103-4f1e-49a9-af6c-6144ca6b7fc4)
+17:45:06.501 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:4, Seed:14225885, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0538260936737, 0.0, 0.0, 14225885> W:(0.123) is completed
+17:45:06.531 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:4682682, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23018 (Environment Variable: fafa73e5-5ba2-4266-86fb-d2385b2392e7)
+17:45:06.582 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:5, Seed:14613826, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0308041572571, 0.0, 0.0, 14613826> W:(0.083) is completed
+17:45:06.599 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:10391712, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23025 (Environment Variable: 143e2048-efb2-42e7-846e-fc8364ebecc5)
+17:45:06.612 [Model Point Selector Queue Handoff Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Model Queue has 0 elements 
+17:45:06.628 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Got 0 points to add to queue
+17:45:06.628 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Building model with 20 new runs 
+17:45:06.646 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest with 0 censored runs out of 21 total 
+17:45:06.662 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest took 0.016 seconds 
+17:45:06.669 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:4682682, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0484490394592, 0.0, 0.0, 4682682> W:(0.119) is completed
+17:45:06.702 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:3, Seed:13930786, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23032 (Environment Variable: e2f06fa6-b91a-4d27-aadc-58742a3f80cc)
+17:45:06.755 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:10391712, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0425579547882, 0.0, 0.0, 10391712> W:(0.089) is completed
+17:45:06.766 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:5, Seed:11764924, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23039 (Environment Variable: cb873aad-6b68-413d-aec6-24d09839859e)
+17:45:06.957 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:5, Seed:11764924, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0662450790405, 0.0, 0.0, 11764924> W:(0.151) is completed
+17:45:06.972 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:4, Seed:11895483, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23046 (Environment Variable: e180da75-8631-46ab-8db4-27acd19033b0)
+17:45:07.072 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Got 17 points to add to queue
+17:45:07.128 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:4, Seed:11895483, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0621471405029, 0.0, 0.0, 11895483> W:(0.129) is completed
+17:45:07.138 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:9723719, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23053 (Environment Variable: e6e664d4-2458-4ea6-903e-6b105356f1b4)
+17:45:07.192 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:3, Seed:13930786, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.408210992813, 0.0, 0.0, 13930786> W:(0.492) is completed
+17:45:07.207 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:4, Seed:16442981, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> started with pid: 23060 (Environment Variable: b92f96b2-513d-41de-b0be-73e14c525ba2)
+17:45:07.259 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:9723719, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0545330047607, 0.0, 0.0, 9723719> W:(0.104) is completed
+17:45:07.260 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x002F) (0x002F) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 1, taeSubmitTime: 977, runsSubmitted: 1
+17:45:07.264 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 2 run(s) for challenger 15(0x0029) up to a total bound of 0.15560197130852335 
+17:45:07.267 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x002F, Kappa:1.0132630694389344, Execution Config: 0x0001> started with pid: 23068 (Environment Variable: 35367887-a165-49f9-b738-a953ec4574b8)
+17:45:07.313 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:3, Seed:7372238, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.767502069473, 0.0, 0.0, 7372238> W:(0.813) is completed
+17:45:07.349 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:3, Seed:6367969, Config:0x0027, Kappa:0.019323421478285002, Execution Config: 0x0001> started with pid: 23075 (Environment Variable: a34b73b8-fe12-4b6a-81f1-d52cf5ea916d)
+17:45:07.365 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:4, Seed:16442981, Config:0x000A, Kappa:10.0, Execution Config: 0x0001> ==> <SAT, 0.0429589748383, 0.0, 0.0, 16442981> W:(0.088) is completed
+17:45:07.368 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Building model with 1 new runs 
+17:45:07.373 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest with 0 censored runs out of 21 total 
+17:45:07.377 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:4, Seed:5844858, Config:0x0027, Kappa:0.019323421478285002, Execution Config: 0x0001> started with pid: 23081 (Environment Variable: 816c5e1a-8096-4353-856b-5bbe7cab15ff)
+17:45:07.379 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest took 0.006 seconds 
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.418 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.419 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.419 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.419 [Bounded Target Algorithm Evaluator Callback Thread (5-5)] DEBUG c.u.c.b.a.t.d.d.LogEveryTargetAlgorithmEvaluatorDecorator - Run Completed:  
+17:45:07.424 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x002F, Kappa:1.0132630694389344, Execution Config: 0x0001> ==> <SAT, 0.0392990112305, 0.0, 0.0, 1595174> W:(0.109) is completed
+17:45:07.437 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:1, Seed:1595174, Config:0x0029, Kappa:1.572627805519104, Execution Config: 0x0001> started with pid: 23088 (Environment Variable: 436ba7a1-a3bf-4ef1-ad1a-6f53d5ce73db)
+17:45:07.547 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:4, Seed:5844858, Config:0x0027, Kappa:0.019323421478285002, Execution Config: 0x0001> ==> <SAT, 0.0645709037781, 0.0, 0.0, 5844858> W:(0.137) is completed
+17:45:07.548 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger 15 (0x0029) (0x0029) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 4, taeSubmitTime: 280, runsSubmitted: 2
+17:45:07.557 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0032) up to a total bound of 0.0448090165456 
+17:45:07.559 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:07.560 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:3, Seed:6367969, Config:0x0029, Kappa:1.3703458536148072, Execution Config: 0x0001> started with pid: 23097 (Environment Variable: 62eaf089-4975-4bfe-bede-b985015d7bda)
+17:45:07.561 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:1, Seed:1595174, Config:0x0029, Kappa:1.572627805519104, Execution Config: 0x0001> ==> <SAT, 0.0274360179901, 0.0, 0.0, 1595174> W:(0.088) is completed
+17:45:07.596 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0032) (0x0032) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 38, runsSubmitted: 1
+17:45:07.600 [Random-Point-Selector] DEBUG c.u.c.b.d.p.RandomConfigurationPointSelector - Generating Random Configuration
+17:45:07.600 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x0033) up to a total bound of 0.050186766147625 
+17:45:07.607 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:10709352, Config:0x0032, Kappa:1.0595524538040162, Execution Config: 0x0001> started with pid: 23101 (Environment Variable: 4d2faa45-27f4-43df-a36a-96c889c947ae)
+17:45:07.612 [Model Point Selector Queue Handoff Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Model Queue has 17 elements 
+17:45:07.717 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Got 17 points to add to queue
+17:45:07.717 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Building model with 12 new runs 
+17:45:07.719 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest with 0 censored runs out of 34 total 
+17:45:07.725 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:10709352, Config:0x0032, Kappa:1.0595524538040162, Execution Config: 0x0001> ==> <SAT, 0.0428349971771, 0.0, 0.0, 10709352> W:(0.102) is completed
+17:45:07.727 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x0033) (0x0033) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 1, taeSubmitTime: 126, runsSubmitted: 1
+17:45:07.731 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest took 0.004 seconds 
+17:45:07.732 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 1 run(s) for challenger -1(0x442D) up to a total bound of 0.050186766147625 
+17:45:07.734 [Model Point Selector Queue Handoff Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Model Queue has 33 elements 
+17:45:07.735 [Bounded Target Algorithm Evaluator Callback Thread (5-3)] DEBUG c.u.c.b.d.c.RunBatchCompletionTAECallback - Challenger 18 (0x0032) still looks good, will schedule another round of intensification 
+17:45:07.743 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:4, Seed:14225885, Config:0x0033, Kappa:1.0665432441711427, Execution Config: 0x0001> started with pid: 23109 (Environment Variable: 35a51554-4317-4091-9a63-57abeecd5ecc)
+17:45:07.863 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:4, Seed:14225885, Config:0x0033, Kappa:1.0665432441711427, Execution Config: 0x0001> ==> <SAT, 0.0386538505554, 0.0, 0.0, 14225885> W:(0.098) is completed
+17:45:07.865 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger -1 (0x442D) (0x442D) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 2, taeSubmitTime: 131, runsSubmitted: 1
+17:45:07.872 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:4, Seed:5844858, Config:0x442D, Kappa:1.0665432441711427, Execution Config: 0x0001> started with pid: 23116 (Environment Variable: b8bc8aa9-6551-4602-b06a-64de7c86259e)
+17:45:07.873 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 2 run(s) for challenger 18(0x0032) up to a total bound of 0.2900498638153 
+17:45:07.909 [Bounded Target Algorithm Evaluator Callback Thread (5-6)] DEBUG c.u.c.b.d.c.RunBatchCompletionTAECallback - Challenger 19 (0x0033) still looks good, will schedule another round of intensification 
+17:45:07.980 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Got 19 points to add to queue
+17:45:07.992 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Building model with 2 new runs 
+17:45:07.998 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest with 0 censored runs out of 36 total 
+17:45:08.016 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest took 0.015 seconds 
+17:45:08.024 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:4, Seed:5844858, Config:0x442D, Kappa:1.0665432441711427, Execution Config: 0x0001> ==> <SAT, 0.0512108802795, 0.0, 0.0, 5844858> W:(0.111) is completed
+17:45:08.031 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:2, Seed:4682682, Config:0x0032, Kappa:2.4538741934776303, Execution Config: 0x0001> started with pid: 23123 (Environment Variable: 1643f0a8-f4b3-4ce0-ba8d-a84c2cca9a56)
+17:45:08.185 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:2, Seed:4682682, Config:0x0032, Kappa:2.4538741934776303, Execution Config: 0x0001> ==> <SAT, 0.0540528297424, 0.0, 0.0, 4682682> W:(0.133) is completed
+17:45:08.186 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Processing stage of challenger 18 (0x0032) (0x0032) has times in (ms) queuePull: 0 , challengersLock: 0, runHistoryLock: 0, processingTime: 3, taeSubmitTime: 311, runsSubmitted: 2
+17:45:08.194 [Challenge Queue Consumption Thread] DEBUG c.u.c.b.d.c.ChallengeConsumer - Performing 2 run(s) for challenger 19(0x0033) up to a total bound of 0.04741178250312917 
+17:45:08.199 [CLI TAE (Master Thread - #2)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Process for <Instance:3, Seed:13930786, Config:0x0032, Kappa:1.699744426059723, Execution Config: 0x0001> started with pid: 23130 (Environment Variable: 53e2f150-6f86-4a8a-a4d9-03a25068c413)
+17:45:08.233 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Got 21 points to add to queue
+17:45:08.237 [Model Building Thread] DEBUG c.u.c.b.d.p.ModelBasedPointSelector - Building model with 1 new runs 
+17:45:08.264 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest with 0 censored runs out of 37 total 
+17:45:08.269 [Model Building Thread] DEBUG c.u.c.b.a.m.b.AdaptiveCappingModelBuilder - Building Random Forest took 0.005 seconds 
+17:45:08.286 [Unclean Target Algorithm Evaluator Shutdown Detector] DEBUG c.u.c.b.a.t.d.d.UncleanShutdownDetectingTargetAlgorithmEvaluator - Unclean Shutdown Detected, You must call notifyShutdown() on your TAE. You may have a broken TAE decorator that doesn't forward the notifyShutdown() correctly
+17:45:08.286 [Unclean Target Algorithm Evaluator Shutdown Detector] DEBUG c.u.c.b.a.t.d.d.UncleanShutdownDetectingTargetAlgorithmEvaluator - Target algorithm that wasn't shutdown was created here:
+ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.decorators.debug.UncleanShutdownDetectingTargetAlgorithmEvaluator.<init>(UncleanShutdownDetectingTargetAlgorithmEvaluator.java:35)
+ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.init.TargetAlgorithmEvaluatorBuilder.getTargetAlgorithmEvaluator(TargetAlgorithmEvaluatorBuilder.java:139)
+ca.ubc.cs.beta.dsmac.builder.DSMACBuilder.getTargetAlgorithmEvaluator(DSMACBuilder.java:146)
+ca.ubc.cs.beta.dsmac.builder.DSMACBuilder.getSMAC(DSMACBuilder.java:387)
+ca.ubc.cs.beta.dsmac.executor.DSMACExecutor.dSMAC(DSMACExecutor.java:133)
+ca.ubc.cs.beta.dsmac.executor.DSMACExecutor.main(DSMACExecutor.java:83)
+
+17:45:08.298 [Shutdown Runtime Statistics] INFO  c.u.c.b.a.e.h.LogRuntimeStatistics - *****Developer Statistics*****
+ Count: 2
+ Incumbent ID: 1 (internal ID:0x000A)
+ Number of PISPs for Incumbent: 16
+ Number of Instances for Incumbent: 5
+ Number of Configurations Run: 20
+ Performance of the Incumbent: 0.139
+ Number of Challenges Started: 23
+ Number of Challenges Oustanding:0
+ Configuration Time Budget used: 6.51 s (0%)
+ Configuration Time Budget remaining: 2.15E9 s
+ Wall-clock Time Budget used: 2.64 s (8%)
+ Wall-clock Time Budget remaining: 27.36 s
+ Algorithm Runs used: 37.00  (0%)
+ Algorithm Runs remaining: 9.22E18 
+ Model/Iteration used: 4.00  (0%)
+ Model/Iteration remaining: 2.15E9 
+ Sum of Target Algorithm Execution Times (treating minimum value as 0.1): 5.003 s
+ CPU time of Configurator: 1.504 s
+ User time of Configurator: 1.504 s
+ Outstanding Runs on Target Algorithm Evaluator: 8
+ Outstanding Requests on Target Algorithm Evaluator: 4
+ Total Reported Algorithm Runtime: 2.678 s
+ Sum of Measured Wallclock Runtime: 4.661 s
+ Max Memory: 3506 MB
+ Total Java Memory: 236 MB
+ Free Java Memory: 177 MB
+ * PISP count is roughly the number of runs, but doesn't included redundant runs on the same problem instance & seed
+17:45:08.314 [CLI Shutdown Thread] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Terminating approximately 4 outstanding algorithm runs
+17:45:08.360 [CLI TAE Observer Threads (2-1)] DEBUG c.u.c.b.a.t.d.s.JVMShutdownBlockerTargetAlgorithmEvaluatorDecorator - JVM Shutdown detected, all algorithm execution requests and completion results are being dropped
+17:45:08.373 [CLI TAE (Master Thread - #0)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:3, Seed:6367969, Config:0x0027, Kappa:0.019323421478285002, Execution Config: 0x0001> ==> <KILLED, 0.0, 0.0, 0.0, 6367969,JVM Shutdown Detected> W:(1.043) is completed
+17:45:08.425 [CLI TAE (Master Thread - #3)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:3, Seed:6367969, Config:0x001B, Kappa:10.0, Execution Config: 0x0001> ==> <KILLED, 0.0, 0.0, 0.0, 6367969,JVM Shutdown Detected> W:(2.213) is completed
+17:45:08.499 [CLI TAE (Master Thread - #1)] DEBUG c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - Run <Instance:3, Seed:6367969, Config:0x0029, Kappa:1.3703458536148072, Execution Config: 0x0001> ==> <KILLED, 0.0, 0.0, 0.0, 6367969,JVM Shutdown Detected> W:(0.923) is completed

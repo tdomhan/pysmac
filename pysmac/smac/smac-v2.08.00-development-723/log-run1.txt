@@ -1,0 +1,14 @@
+18:00:17.183 [main] INFO  c.u.c.b.a.l.ComplexLoggingOptions - Logging to: /home/sjr/git/SMAC-Java/deployables/log-run1.txt
+18:00:17.195 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Algorithm Execution & Abstraction Toolkit is v2.08.00dev-development-757 (925857a71993) 
+18:00:17.196 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Java Runtime Environment is OpenJDK 64-Bit Server VM (1.7.0_55) 
+18:00:17.196 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of OS is Linux 3.13.0-30-generic (amd64) 
+18:00:17.196 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Random Forest Library is v1.05.01dev-development-103 (09a591cc9348) 
+18:00:17.196 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of SMAC is v2.08.00dev-development-722 (1e0db8af2bbb) 
+18:00:17.196 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - Message: Unknown option: -ueotnh
+18:00:17.197 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Note that some options are read from files in ~/.aeatk/
+18:00:17.197 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Exiting SMAC with failure. Log: /home/sjr/git/SMAC-Java/deployables/log-run1.txt
+18:00:17.197 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - For a list of available commands use:  --help
+18:00:17.197 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The Quickstart guide at available at: http://www.cs.ubc.ca/labs/beta/Projects/SMAC/ or alternatively (doc/quickstart.html) gives simple examples for getting up and running.
+18:00:17.197 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The FAQ (doc/faq.pdf) contains commonly asked questions regarding troubleshooting, and usage.
+18:00:17.197 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - The Manual (doc/manual.pdf) contains detailed information on file format semantics.
+18:00:17.197 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - If you are stuck, please ask a question in the SMAC forum: https://groups.google.com/forum/#!forum/smac-forum
